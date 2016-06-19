@@ -1,0 +1,1426 @@
+    start.station.id end.station.id           starttime            stoptime
+393               72            412 2015-01-07 02:12:51 2015-01-07 02:38:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+399              116            147 2015-01-07 02:17:36 2015-01-07 02:43:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+380              116            225 2015-01-07 02:01:27 2015-01-07 02:07:48
+382              116            225 2015-01-07 02:01:47 2015-01-07 02:07:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+105              116            267 2015-01-07 00:15:55 2015-01-07 00:25:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+114              116            318 2015-01-07 00:16:57 2015-01-07 00:35:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+222              116            521 2015-01-07 00:50:29 2015-01-07 00:57:18
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+207              120            366 2015-01-07 00:47:23 2015-01-07 00:53:23
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+76              127            127 2015-01-07 00:11:11 2015-01-07 00:16:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+438              127            195 2015-01-07 03:15:34 2015-01-07 03:27:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+378              127            326 2015-01-07 02:00:38 2015-01-07 02:10:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+250              127            387 2015-01-07 00:59:17 2015-01-07 01:16:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+161              127            460 2015-01-07 00:32:39 2015-01-07 01:03:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+141              127            530 2015-01-07 00:24:58 2015-01-07 00:46:14
+142              127            530 2015-01-07 00:25:04 2015-01-07 00:46:32
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+124              128            127 2015-01-07 00:19:34 2015-01-07 00:23:31
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+15              128            331 2015-01-07 00:02:26 2015-01-07 00:14:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+360              143            322 2015-01-07 01:53:36 2015-01-07 01:56:13
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+94              146            329 2015-01-07 00:14:02 2015-01-07 00:17:02
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+231              151            161 2015-01-07 00:53:13 2015-01-07 01:01:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+196              151            293 2015-01-07 00:43:26 2015-01-07 00:54:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+215              151            293 2015-01-07 00:49:36 2015-01-07 00:56:18
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+318              151            320 2015-01-07 01:29:03 2015-01-07 01:34:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+283              151            352 2015-01-07 01:13:09 2015-01-07 01:35:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+118              152            259 2015-01-07 00:17:47 2015-01-07 00:26:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+191              152            264 2015-01-07 00:41:33 2015-01-07 00:46:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+202              161            225 2015-01-07 00:46:57 2015-01-07 01:02:11
+203              161            225 2015-01-07 00:46:59 2015-01-07 01:02:29
+204              161            225 2015-01-07 00:47:01 2015-01-07 01:01:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+361              161            312 2015-01-07 01:53:38 2015-01-07 02:12:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+473              161            326 2015-01-07 04:14:18 2015-01-07 04:35:09
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+312              161            442 2015-01-07 01:26:17 2015-01-07 01:44:10
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+45              164            495 2015-01-07 00:06:31 2015-01-07 00:15:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+447              173            500 2015-01-07 03:27:12 2015-01-07 03:30:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+247              174            279 2015-01-07 00:58:44 2015-01-07 01:18:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+144              212            479 2015-01-07 00:26:25 2015-01-07 00:38:09
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+18              212            498 2015-01-07 00:02:43 2015-01-07 00:18:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+106              223            254 2015-01-07 00:15:59 2015-01-07 00:18:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+304              223            326 2015-01-07 01:20:09 2015-01-07 01:27:48
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+46              223            382 2015-01-07 00:06:59 2015-01-07 00:11:16
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+77              223            461 2015-01-07 00:11:20 2015-01-07 00:22:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+275              225            499 2015-01-07 01:09:14 2015-01-07 01:38:05
+276              225            499 2015-01-07 01:09:15 2015-01-07 01:37:58
+277              225            499 2015-01-07 01:09:17 2015-01-07 01:37:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+301              236            290 2015-01-07 01:19:01 2015-01-07 01:36:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+342              236            297 2015-01-07 01:45:18 2015-01-07 01:49:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+476              236            307 2015-01-07 04:24:50 2015-01-07 04:36:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+210              236            312 2015-01-07 00:48:54 2015-01-07 00:58:32
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+96              236            345 2015-01-07 00:14:15 2015-01-07 00:21:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+455              236            432 2015-01-07 03:39:18 2015-01-07 03:41:11
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+146              237            311 2015-01-07 00:27:07 2015-01-07 00:36:05
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+43              237            487 2015-01-07 00:06:13 2015-01-07 00:12:12
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+156              237            494 2015-01-07 00:30:31 2015-01-07 00:41:34
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+27              238            490 2015-01-07 00:03:57 2015-01-07 00:15:15
+29              238            490 2015-01-07 00:04:03 2015-01-07 00:15:09
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+308              238            499 2015-01-07 01:23:04 2015-01-07 01:45:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+188              238            518 2015-01-07 00:40:23 2015-01-07 01:01:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+200              239            244 2015-01-07 00:45:44 2015-01-07 00:54:34
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+108              239            313 2015-01-07 00:16:11 2015-01-07 00:23:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+309              239            419 2015-01-07 01:23:20 2015-01-07 01:27:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+471              239            419 2015-01-07 04:12:05 2015-01-07 04:18:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+240              247            403 2015-01-07 00:55:33 2015-01-07 01:06:41
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+264              248           3002 2015-01-07 01:05:40 2015-01-07 01:28:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+245              249            477 2015-01-07 00:57:45 2015-01-07 01:19:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+302              250            285 2015-01-07 01:19:05 2015-01-07 01:26:55
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+86              250            331 2015-01-07 00:12:39 2015-01-07 00:23:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+467              250            531 2015-01-07 04:04:09 2015-01-07 04:09:11
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+192              251            161 2015-01-07 00:41:37 2015-01-07 00:51:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+197              251            285 2015-01-07 00:43:31 2015-01-07 00:49:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+183              252            475 2015-01-07 00:39:27 2015-01-07 00:47:13
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+84              254            472 2015-01-07 00:12:19 2015-01-07 00:31:46
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+175              254            504 2015-01-07 00:37:27 2015-01-07 00:45:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+292              262            353 2015-01-07 01:15:41 2015-01-07 01:20:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+369              263            263 2015-01-07 01:56:53 2015-01-07 02:16:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+445              263            279 2015-01-07 03:26:23 2015-01-07 03:32:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+448              263            291 2015-01-07 03:27:17 2015-01-07 03:33:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+443              264            404 2015-01-07 03:25:10 2015-01-07 03:42:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+389              266            266 2015-01-07 02:07:13 2015-01-07 02:28:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+341              267            498 2015-01-07 01:44:38 2015-01-07 01:51:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+436              268            483 2015-01-07 03:15:06 2015-01-07 03:24:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+249              271            536 2015-01-07 00:59:11 2015-01-07 01:35:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+487              276             79 2015-01-07 04:51:23 2015-01-07 04:54:11
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+310              280            168 2015-01-07 01:25:54 2015-01-07 01:31:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+390              281            173 2015-01-07 02:10:13 2015-01-07 02:17:12
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+14              281            492 2015-01-07 00:02:07 2015-01-07 00:14:34
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+78              284            236 2015-01-07 00:11:26 2015-01-07 00:23:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+409              284            361 2015-01-07 02:33:37 2015-01-07 02:45:36
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+421              284            428 2015-01-07 02:54:13 2015-01-07 03:02:37
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+287              284            463 2015-01-07 01:14:34 2015-01-07 01:16:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+432              284            479 2015-01-07 03:06:21 2015-01-07 03:19:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+451              284            514 2015-01-07 03:28:49 2015-01-07 03:47:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+433              284            515 2015-01-07 03:06:29 2015-01-07 03:18:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+189              285            127 2015-01-07 00:40:33 2015-01-07 00:51:13
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+121              285            254 2015-01-07 00:18:18 2015-01-07 00:22:08
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+300              285            438 2015-01-07 01:18:39 2015-01-07 01:25:08
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+181              285            494 2015-01-07 00:39:12 2015-01-07 00:57:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+164              285            507 2015-01-07 00:34:47 2015-01-07 00:46:07
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+42              285            531 2015-01-07 00:06:01 2015-01-07 09:04:59
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+32              285            534 2015-01-07 00:04:35 2015-01-07 00:33:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+350              290            237 2015-01-07 01:48:44 2015-01-07 02:06:08
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+450              290            469 2015-01-07 03:28:15 2015-01-07 03:40:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+122              290            511 2015-01-07 00:19:16 2015-01-07 00:35:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+321              293            223 2015-01-07 01:32:44 2015-01-07 01:38:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+242              293            252 2015-01-07 00:56:05 2015-01-07 01:00:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+208              293            394 2015-01-07 00:47:53 2015-01-07 00:57:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+474              293            422 2015-01-07 04:14:39 2015-01-07 04:30:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+225              293            432 2015-01-07 00:51:13 2015-01-07 00:58:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+110              293            501 2015-01-07 00:16:27 2015-01-07 00:33:13
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+258              293           2010 2015-01-07 01:02:39 2015-01-07 01:09:44
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+100              294            257 2015-01-07 00:15:22 2015-01-07 00:23:12
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+73              294            311 2015-01-07 00:11:05 2015-01-07 00:31:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+402              294            461 2015-01-07 02:20:54 2015-01-07 02:27:36
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+55              294            474 2015-01-07 00:07:54 2015-01-07 00:16:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+257              294            531 2015-01-07 01:02:21 2015-01-07 01:16:21
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+248              295            311 2015-01-07 00:59:05 2015-01-07 01:03:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+452              295            314 2015-01-07 03:29:09 2015-01-07 03:44:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+133              295            356 2015-01-07 00:23:24 2015-01-07 00:27:36
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+52              296            340 2015-01-07 00:07:30 2015-01-07 00:12:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+274              296            502 2015-01-07 01:08:51 2015-01-07 01:35:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+182              296            507 2015-01-07 00:39:15 2015-01-07 00:59:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+239              297            328 2015-01-07 00:55:13 2015-01-07 01:11:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+178              297            438 2015-01-07 00:38:29 2015-01-07 00:42:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+117              297            441 2015-01-07 00:17:42 2015-01-07 00:28:20
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+23              297            490 2015-01-07 00:03:27 2015-01-07 01:13:37
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+57              297            507 2015-01-07 00:08:04 2015-01-07 00:14:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+123              300            388 2015-01-07 00:19:34 2015-01-07 00:31:01
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+51              300            504 2015-01-07 00:07:27 2015-01-07 00:12:21
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+236              301            237 2015-01-07 00:53:33 2015-01-07 01:01:46
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+329              304            534 2015-01-07 01:35:55 2015-01-07 01:37:46
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+2              304           3002 2015-01-07 00:00:06 2015-01-07 00:05:29
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+95              305            518 2015-01-07 00:14:05 2015-01-07 00:20:48
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+61              306            355 2015-01-07 00:08:27 2015-01-07 00:14:08
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+21              306            387 2015-01-07 00:03:05 2015-01-07 00:06:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+370              307            251 2015-01-07 01:57:19 2015-01-07 02:05:36
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+412              307            312 2015-01-07 02:37:12 2015-01-07 02:44:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+484              307            386 2015-01-07 04:50:13 2015-01-07 04:54:40
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+70              307            403 2015-01-07 00:09:33 2015-01-07 00:15:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+408              307            438 2015-01-07 02:30:31 2015-01-07 02:37:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+220              307            484 2015-01-07 00:50:10 2015-01-07 01:20:35
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+56              307           2002 2015-01-07 00:08:01 2015-01-07 00:22:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+140              309            224 2015-01-07 00:24:54 2015-01-07 00:29:33
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+75              309            387 2015-01-07 00:11:10 2015-01-07 00:35:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+185              310            238 2015-01-07 00:39:29 2015-01-07 01:14:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+234              310            437 2015-01-07 00:53:26 2015-01-07 01:18:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+376              311            168 2015-01-07 01:59:35 2015-01-07 02:12:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+282              311            361 2015-01-07 01:13:07 2015-01-07 01:15:47
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+8              312            236 2015-01-07 00:01:06 2015-01-07 00:05:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+441              312            250 2015-01-07 03:20:17 2015-01-07 03:27:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+466              312            257 2015-01-07 04:03:45 2015-01-07 04:10:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+489              312            295 2015-01-07 04:55:49 2015-01-07 05:00:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+401              312            312 2015-01-07 02:18:09 2015-01-07 03:24:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+400              312            401 2015-01-07 02:17:38 2015-01-07 03:21:32
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+263              312            435 2015-01-07 01:05:31 2015-01-07 01:22:49
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+47              312            442 2015-01-07 00:07:06 2015-01-07 00:21:08
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+31              312            448 2015-01-07 00:04:18 2015-01-07 00:21:19
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+59              312            504 2015-01-07 00:08:07 2015-01-07 00:14:37
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+497              312           2009 2015-01-07 05:05:34 2015-01-07 05:17:21
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+107              313            244 2015-01-07 00:16:04 2015-01-07 00:19:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+430              314            391 2015-01-07 03:04:06 2015-01-07 03:07:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+147              316            356 2015-01-07 00:27:26 2015-01-07 00:46:48
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+262              318            498 2015-01-07 01:04:42 2015-01-07 01:12:13
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+418              320            360 2015-01-07 02:45:59 2015-01-07 02:51:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+237              320            401 2015-01-07 00:54:32 2015-01-07 01:04:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+127              321           2000 2015-01-07 00:22:04 2015-01-07 00:23:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+439              324            241 2015-01-07 03:18:52 2015-01-07 03:21:28
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+60              324            262 2015-01-07 00:08:13 2015-01-07 00:11:56
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+278              325            438 2015-01-07 01:09:18 2015-01-07 01:15:35
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+54              325            440 2015-01-07 00:07:46 2015-01-07 00:14:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+214              326            195 2015-01-07 00:49:31 2015-01-07 01:10:58
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+221              326            284 2015-01-07 00:50:16 2015-01-07 00:59:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+224              326            325 2015-01-07 00:50:54 2015-01-07 00:57:32
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+285              326            411 2015-01-07 01:13:59 2015-01-07 12:07:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+172              326            503 2015-01-07 00:36:24 2015-01-07 01:02:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+174              326            503 2015-01-07 00:36:53 2015-01-07 00:58:46
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+198              326            503 2015-01-07 00:45:33 2015-01-07 00:58:51
+199              326            503 2015-01-07 00:45:33 2015-01-07 00:59:10
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+5              327             72 2015-01-07 00:00:44 2015-01-07 00:23:48
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+260              327            340 2015-01-07 01:03:28 2015-01-07 01:24:01
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+19              328            167 2015-01-07 00:02:47 2015-01-07 00:25:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+176              328            467 2015-01-07 00:37:59 2015-01-07 01:19:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+180              328            467 2015-01-07 00:39:10 2015-01-07 01:19:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+184              328           3002 2015-01-07 00:39:28 2015-01-07 01:04:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+475              331            127 2015-01-07 04:15:40 2015-01-07 04:38:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+297              334            300 2015-01-07 01:18:16 2015-01-07 01:36:37
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+88              334            503 2015-01-07 00:13:16 2015-01-07 00:20:44
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+63              334           2004 2015-01-07 00:08:31 2015-01-07 00:16:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+410              335            247 2015-01-07 02:33:43 2015-01-07 02:44:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+265              335            357 2015-01-07 01:05:56 2015-01-07 01:08:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+343              335            401 2015-01-07 01:45:27 2015-01-07 01:55:08
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+13              336            454 2015-01-07 00:02:06 2015-01-07 00:22:17
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+126              342            408 2015-01-07 00:21:41 2015-01-07 00:29:51
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+30              345            492 2015-01-07 00:04:17 2015-01-07 00:20:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+351              346            453 2015-01-07 01:49:39 2015-01-07 01:55:52
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+48              346            494 2015-01-07 00:07:06 2015-01-07 00:14:43
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+82              346            494 2015-01-07 00:12:12 2015-01-07 00:19:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+307              348            161 2015-01-07 01:21:55 2015-01-07 01:24:58
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+457              348            439 2015-01-07 03:41:23 2015-01-07 03:46:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+316              349            340 2015-01-07 01:27:58 2015-01-07 01:33:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+425              352            128 2015-01-07 02:56:57 2015-01-07 03:14:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+177              355            380 2015-01-07 00:38:26 2015-01-07 00:48:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+223              357            357 2015-01-07 00:50:40 2015-01-07 01:08:03
+226              357            357 2015-01-07 00:51:25 2015-01-07 01:07:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+470              357           2003 2015-01-07 04:10:16 2015-01-07 04:39:11
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+65              358            328 2015-01-07 00:08:39 2015-01-07 00:14:52
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+79              358            368 2015-01-07 00:11:39 2015-01-07 00:16:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+348              358            405 2015-01-07 01:48:09 2015-01-07 01:55:06
+349              358            405 2015-01-07 01:48:32 2015-01-07 01:54:34
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+10              358            417 2015-01-07 00:01:41 2015-01-07 00:15:15
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+233              360            356 2015-01-07 00:53:23 2015-01-07 01:06:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+488              360            465 2015-01-07 04:54:30 2015-01-07 05:21:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+486              361            268 2015-01-07 04:51:16 2015-01-07 04:55:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+303              361            375 2015-01-07 01:19:19 2015-01-07 01:31:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+449              363            427 2015-01-07 03:27:18 2015-01-07 03:31:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+353              364            120 2015-01-07 01:49:55 2015-01-07 01:52:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+354              364            353 2015-01-07 01:49:56 2015-01-07 08:32:44
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+498              365            437 2015-01-07 05:05:45 2015-01-07 05:10:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+160              366            120 2015-01-07 00:32:17 2015-01-07 00:39:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+296              366            313 2015-01-07 01:17:36 2015-01-07 01:19:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+288              366            399 2015-01-07 01:15:06 2015-01-07 01:29:57
+289              366            399 2015-01-07 01:15:10 2015-01-07 01:29:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+195              367            477 2015-01-07 00:42:46 2015-01-07 00:55:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+272              368            217 2015-01-07 01:07:49 2015-01-07 01:34:11
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+478              368            247 2015-01-07 04:33:22 2015-01-07 04:36:17
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+284              368            257 2015-01-07 01:13:48 2015-01-07 01:21:34
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+24              368            410 2015-01-07 00:03:34 2015-01-07 00:13:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+149              368            455 2015-01-07 00:27:54 2015-01-07 00:46:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+336              369            300 2015-01-07 01:42:18 2015-01-07 01:57:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+422              369            356 2015-01-07 02:54:16 2015-01-07 03:07:18
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+143              369            488 2015-01-07 00:25:53 2015-01-07 00:38:14
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+98              373            270 2015-01-07 00:14:27 2015-01-07 00:21:12
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+424              375            332 2015-01-07 02:56:16 2015-01-07 03:07:36
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+416              375            531 2015-01-07 02:42:21 2015-01-07 02:57:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+379              379            311 2015-01-07 02:00:40 2015-01-07 02:24:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+259              379            478 2015-01-07 01:02:49 2015-01-07 01:11:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+493              379            491 2015-01-07 05:01:24 2015-01-07 05:06:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+209              379            546 2015-01-07 00:48:24 2015-01-07 00:55:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+335              380            345 2015-01-07 01:42:16 2015-01-07 01:45:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+294              380            423 2015-01-07 01:15:59 2015-01-07 01:34:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+219              380            494 2015-01-07 00:50:10 2015-01-07 01:01:27
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+36              382            212 2015-01-07 00:04:51 2015-01-07 00:21:46
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+396              382            356 2015-01-07 02:14:06 2015-01-07 02:32:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+111              382            358 2015-01-07 00:16:33 2015-01-07 00:32:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+458              382            380 2015-01-07 03:43:05 2015-01-07 03:52:29
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+91              383             72 2015-01-07 00:13:39 2015-01-07 00:38:23
+99              383             72 2015-01-07 00:14:36 2015-01-07 00:38:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+371              383            168 2015-01-07 01:58:29 2015-01-07 10:35:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+216              383            300 2015-01-07 00:49:44 2015-01-07 01:09:51
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+62              383            312 2015-01-07 00:08:27 2015-01-07 00:17:44
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+229              383            369 2015-01-07 00:52:38 2015-01-07 00:54:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+186              383            375 2015-01-07 00:39:59 2015-01-07 00:45:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+213              383            439 2015-01-07 00:49:21 2015-01-07 01:04:14
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+49              383            453 2015-01-07 00:07:20 2015-01-07 00:15:09
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+134              383            511 2015-01-07 00:23:46 2015-01-07 00:38:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+128              387            232 2015-01-07 00:22:03 2015-01-07 00:35:15
+129              387            232 2015-01-07 00:22:17 2015-01-07 00:35:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+444              387            308 2015-01-07 03:26:16 2015-01-07 03:29:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+299              387            365 2015-01-07 01:18:29 2015-01-07 01:40:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+317              387            386 2015-01-07 01:28:56 2015-01-07 01:46:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+136              387            433 2015-01-07 00:23:55 2015-01-07 00:40:01
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+28              391            504 2015-01-07 00:03:58 2015-01-07 00:43:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+227              394            339 2015-01-07 00:51:44 2015-01-07 00:57:56
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+131              395            262 2015-01-07 00:22:49 2015-01-07 00:40:06
+132              395            262 2015-01-07 00:23:05 2015-01-07 00:39:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+130              395            467 2015-01-07 00:22:26 2015-01-07 00:30:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+115              401            237 2015-01-07 00:17:02 2015-01-07 00:22:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+162              401            263 2015-01-07 00:34:00 2015-01-07 00:39:06
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+39              401            306 2015-01-07 00:05:46 2015-01-07 00:17:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+113              401            331 2015-01-07 00:16:56 2015-01-07 00:20:17
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+125              402            285 2015-01-07 00:20:42 2015-01-07 00:26:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+179              402            352 2015-01-07 00:38:45 2015-01-07 01:01:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+190              403            361 2015-01-07 00:40:42 2015-01-07 00:47:30
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+81              403            545 2015-01-07 00:11:41 2015-01-07 00:20:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+395              404            268 2015-01-07 02:13:11 2015-01-07 02:43:26
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+460              404            404 2015-01-07 03:44:43 2015-01-07 03:45:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+101              405            236 2015-01-07 00:15:34 2015-01-07 00:28:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+333              405            336 2015-01-07 01:40:21 2015-01-07 01:49:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+138              405            368 2015-01-07 00:24:30 2015-01-07 00:32:01
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+9               405            405 2015-01-07 00:01:25 2015-01-07 00:30:57
+11              405            405 2015-01-07 00:01:50 2015-01-07 00:30:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+494              405            438 2015-01-07 05:01:28 2015-01-07 05:13:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+165              405            521 2015-01-07 00:34:58 2015-01-07 00:56:06
+166              405            521 2015-01-07 00:35:23 2015-01-07 00:56:14
+169              405            521 2015-01-07 00:35:43 2015-01-07 00:55:54
+170              405            521 2015-01-07 00:35:48 2015-01-07 00:56:08
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+499              410            326 2015-01-07 05:06:53 2015-01-07 05:32:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+384              411            304 2015-01-07 02:02:50 2015-01-07 02:24:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+194              412            244 2015-01-07 00:41:51 2015-01-07 01:01:21
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+89              415            531 2015-01-07 00:13:32 2015-01-07 00:23:02
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+415              416            244 2015-01-07 02:40:51 2015-01-07 02:46:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+255              417            301 2015-01-07 01:01:09 2015-01-07 01:14:54
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+97              418            322 2015-01-07 00:14:27 2015-01-07 00:19:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+158              422            262 2015-01-07 00:31:03 2015-01-07 01:13:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+273              423             72 2015-01-07 01:08:17 2015-01-07 01:12:21
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+261              423            423 2015-01-07 01:04:16 2015-01-07 01:16:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+163              423            428 2015-01-07 00:34:11 2015-01-07 01:08:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+102              426            157 2015-01-07 00:15:32 2015-01-07 00:42:29
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+44              426            284 2015-01-07 00:06:22 2015-01-07 00:22:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+429              427           3002 2015-01-07 03:02:09 2015-01-07 03:22:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+459              428            263 2015-01-07 03:44:36 2015-01-07 03:52:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+332              428            307 2015-01-07 01:38:15 2015-01-07 01:44:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+398              428            312 2015-01-07 02:16:50 2015-01-07 02:22:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+465              428            345 2015-01-07 04:02:59 2015-01-07 04:12:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+228              428            438 2015-01-07 00:52:32 2015-01-07 00:54:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+298              430            244 2015-01-07 01:18:26 2015-01-07 01:29:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+331              430            313 2015-01-07 01:37:28 2015-01-07 01:45:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+154              430            343 2015-01-07 00:29:04 2015-01-07 00:37:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+152              430           2000 2015-01-07 00:28:54 2015-01-07 00:30:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+377              432            271 2015-01-07 02:00:11 2015-01-07 02:32:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+135              432            432 2015-01-07 00:23:52 2015-01-07 00:25:52
+137              432            432 2015-01-07 00:24:00 2015-01-07 00:25:44
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+168              432            511 2015-01-07 00:35:31 2015-01-07 00:47:48
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+173              433            511 2015-01-07 00:36:27 2015-01-07 00:53:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+381              434            195 2015-01-07 02:01:40 2015-01-07 02:20:09
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+392              434            505 2015-01-07 02:12:45 2015-01-07 02:22:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+315              435            529 2015-01-07 01:27:19 2015-01-07 01:37:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+311              437            365 2015-01-07 01:26:01 2015-01-07 01:29:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+386              438            167 2015-01-07 02:04:58 2015-01-07 02:19:43
+387              438            167 2015-01-07 02:05:08 2015-01-07 02:19:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+155              438            251 2015-01-07 00:30:11 2015-01-07 11:27:20
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+69              438            444 2015-01-07 00:09:26 2015-01-07 00:29:15
+68              438            444 2015-01-07 00:09:26 2015-01-07 00:29:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+112              439            342 2015-01-07 00:16:44 2015-01-07 00:28:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+435              439            349 2015-01-07 03:11:38 2015-01-07 03:22:17
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+293              439            439 2015-01-07 01:15:56 2015-01-07 01:26:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+281              440            236 2015-01-07 01:12:20 2015-01-07 01:48:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+244              441            326 2015-01-07 00:57:28 2015-01-07 01:23:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+462              444            336 2015-01-07 03:56:40 2015-01-07 04:05:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+286              444            510 2015-01-07 01:14:09 2015-01-07 01:29:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+314              444            511 2015-01-07 01:27:07 2015-01-07 01:38:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+266              444            523 2015-01-07 01:06:13 2015-01-07 01:15:20
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+385              445            432 2015-01-07 02:03:40 2015-01-07 02:42:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+109              446            334 2015-01-07 00:16:15 2015-01-07 00:18:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+411              446            520 2015-01-07 02:36:12 2015-01-07 02:46:01
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+35              447             72 2015-01-07 00:04:46 2015-01-07 00:10:10
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+3              447            358 2015-01-07 00:00:17 2015-01-07 00:13:28
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+66              447            490 2015-01-07 00:08:44 2015-01-07 00:17:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+420              448            507 2015-01-07 02:53:27 2015-01-07 03:06:46
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+20              449            422 2015-01-07 00:02:47 2015-01-07 00:07:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+347              453            459 2015-01-07 01:47:58 2015-01-07 01:53:02
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+414              453            476 2015-01-07 02:37:40 2015-01-07 02:45:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+212              454            237 2015-01-07 00:49:18 2015-01-07 01:04:29
+217              454            237 2015-01-07 00:49:45 2015-01-07 01:04:36
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+87              455            312 2015-01-07 00:12:53 2015-01-07 00:36:57
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+6              455            367 2015-01-07 00:01:00 2015-01-07 00:11:04
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+34              455            482 2015-01-07 00:04:45 2015-01-07 00:21:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+116              456            492 2015-01-07 00:17:18 2015-01-07 00:31:34
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+40              457            290 2015-01-07 00:05:49 2015-01-07 00:12:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+346              457            382 2015-01-07 01:47:08 2015-01-07 02:08:46
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+64              457            497 2015-01-07 00:08:31 2015-01-07 00:25:40
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+7              458            116 2015-01-07 00:01:03 2015-01-07 00:09:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+394              461            161 2015-01-07 02:12:54 2015-01-07 02:22:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+413              461            361 2015-01-07 02:37:19 2015-01-07 02:51:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+495              462           2021 2015-01-07 05:02:08 2015-01-07 05:12:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+218              463             72 2015-01-07 00:49:48 2015-01-07 01:01:58
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+93              463            116 2015-01-07 00:14:01 2015-01-07 00:17:54
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+153              463            236 2015-01-07 00:28:54 2015-01-07 00:45:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+211              463            305 2015-01-07 00:49:17 2015-01-07 01:15:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+404              463            511 2015-01-07 02:22:23 2015-01-07 02:37:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+357              466            236 2015-01-07 01:52:34 2015-01-07 02:07:36
+359              466            236 2015-01-07 01:52:49 2015-01-07 02:07:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+442              466            474 2015-01-07 03:23:06 2015-01-07 03:25:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+145              467            322 2015-01-07 00:26:54 2015-01-07 00:36:40
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+58              467            436 2015-01-07 00:08:04 2015-01-07 00:21:34
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+469              468            479 2015-01-07 04:08:47 2015-01-07 04:12:48
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+431              470            466 2015-01-07 03:04:39 2015-01-07 03:10:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+253              472            511 2015-01-07 01:00:32 2015-01-07 01:10:24
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+419              472            528 2015-01-07 02:46:03 2015-01-07 02:49:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+440              473            264 2015-01-07 03:19:59 2015-01-07 03:30:32
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+477              473            308 2015-01-07 04:33:10 2015-01-07 04:40:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+428              473            401 2015-01-07 03:01:46 2015-01-07 03:03:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+423              473            412 2015-01-07 02:55:11 2015-01-07 02:59:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+406              474            507 2015-01-07 02:27:34 2015-01-07 02:33:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+483              477            228 2015-01-07 04:47:09 2015-01-07 04:58:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+319              477            324 2015-01-07 01:29:44 2015-01-07 02:09:41
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+157              477            404 2015-01-07 00:30:47 2015-01-07 00:46:57
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+92              477            449 2015-01-07 00:13:51 2015-01-07 00:19:29
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+90              477            472 2015-01-07 00:13:33 2015-01-07 00:22:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+235              477            513 2015-01-07 00:53:28 2015-01-07 01:01:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+479              478            490 2015-01-07 04:37:09 2015-01-07 04:43:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+148              478            492 2015-01-07 00:27:51 2015-01-07 00:35:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+241              479             72 2015-01-07 00:55:40 2015-01-07 01:01:57
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+83              479            447 2015-01-07 00:12:15 2015-01-07 00:19:44
+85              479            447 2015-01-07 00:12:30 2015-01-07 00:19:44
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+279              479            464 2015-01-07 01:10:24 2015-01-07 01:22:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+372              479            512 2015-01-07 01:58:39 2015-01-07 02:05:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+464              480            334 2015-01-07 04:02:44 2015-01-07 04:14:11
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+383              480            445 2015-01-07 02:02:07 2015-01-07 02:23:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+120              480            490 2015-01-07 00:18:13 2015-01-07 00:27:13
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+320              482            504 2015-01-07 01:32:41 2015-01-07 01:45:15
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+426              482           2021 2015-01-07 02:58:40 2015-01-07 03:09:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+150              483            236 2015-01-07 00:28:19 2015-01-07 00:31:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+481              483            293 2015-01-07 04:44:09 2015-01-07 04:45:49
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+322              485            174 2015-01-07 01:33:44 2015-01-07 01:48:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+482              487            360 2015-01-07 04:46:43 2015-01-07 05:04:48
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+446              487            382 2015-01-07 03:26:58 2015-01-07 03:38:41
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+41              488            463 2015-01-07 00:05:55 2015-01-07 00:14:39
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+1              489            368 2015-01-07 00:00:03 2015-01-07 00:12:16
+[1] ""
+  start.station.id end.station.id           starttime            stoptime
+4              490            250 2015-01-07 00:00:23 2015-01-07 00:20:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+367              490            525 2015-01-07 01:55:01 2015-01-07 01:59:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+492              490            546 2015-01-07 05:00:53 2015-01-07 05:05:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+490              491            485 2015-01-07 04:57:05 2015-01-07 05:02:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+238              491            498 2015-01-07 00:55:00 2015-01-07 01:02:25
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+397              492            281 2015-01-07 02:14:31 2015-01-07 02:25:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+500              492            351 2015-01-07 05:07:05 2015-01-07 05:42:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+496              492            444 2015-01-07 05:03:39 2015-01-07 05:09:23
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+434              492            482 2015-01-07 03:08:43 2015-01-07 03:15:29
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+33              495            422 2015-01-07 00:04:41 2015-01-07 00:11:05
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+437              495            423 2015-01-07 03:15:15 2015-01-07 03:20:35
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+71              496            116 2015-01-07 00:09:47 2015-01-07 00:16:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+373              497            345 2015-01-07 01:58:56 2015-01-07 02:03:43
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+355              497            477 2015-01-07 01:49:58 2015-01-07 02:23:35
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+337              497            497 2015-01-07 01:42:23 2015-01-07 01:53:54
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+17              497            504 2015-01-07 00:02:35 2015-01-07 00:08:06
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+67              498            127 2015-01-07 00:09:00 2015-01-07 00:22:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+243              498            285 2015-01-07 00:56:15 2015-01-07 01:02:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+290              498            428 2015-01-07 01:15:22 2015-01-07 01:41:00
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+374              498            461 2015-01-07 01:59:19 2015-01-07 02:10:04
+375              498            461 2015-01-07 01:59:26 2015-01-07 02:10:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+305              498            478 2015-01-07 01:20:51 2015-01-07 01:40:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+306              498            478 2015-01-07 01:21:46 2015-01-07 01:39:08
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+74              498            490 2015-01-07 00:11:05 2015-01-07 00:13:46
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+12              499            160 2015-01-07 00:01:58 2015-01-07 00:15:51
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+388              499            173 2015-01-07 02:05:26 2015-01-07 02:12:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+472              499            514 2015-01-07 04:13:26 2015-01-07 04:25:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+291              500            167 2015-01-07 01:15:36 2015-01-07 01:27:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+344              500            281 2015-01-07 01:45:57 2015-01-07 01:51:28
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+454              500            500 2015-01-07 03:35:46 2015-01-07 03:40:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+368              501            501 2015-01-07 01:56:13 2015-01-07 02:24:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+269              503            340 2015-01-07 01:06:33 2015-01-07 01:28:29
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+267              503            517 2015-01-07 01:06:24 2015-01-07 01:24:00
+268              503            517 2015-01-07 01:06:33 2015-01-07 01:24:33
+270              503            517 2015-01-07 01:06:59 2015-01-07 01:24:02
+271              503            517 2015-01-07 01:07:00 2015-01-07 01:24:02
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+407              505            495 2015-01-07 02:30:26 2015-01-07 02:39:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+356              507            466 2015-01-07 01:51:30 2015-01-07 01:57:58
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+453              511            285 2015-01-07 03:32:07 2015-01-07 03:37:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+104              511            402 2015-01-07 00:15:55 2015-01-07 00:23:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+485              512           2009 2015-01-07 04:51:00 2015-01-07 05:21:32
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+417              512           2021 2015-01-07 02:45:50 2015-01-07 02:55:50
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+352              515            116 2015-01-07 01:49:54 2015-01-07 02:10:41
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+171              516            345 2015-01-07 00:36:05 2015-01-07 00:53:38
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+72              516            477 2015-01-07 00:09:47 2015-01-07 00:20:08
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+334              517            465 2015-01-07 01:42:06 2015-01-07 02:32:01
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+338              517            465 2015-01-07 01:43:08 2015-01-07 02:32:01
+339              517            465 2015-01-07 01:43:32 2015-01-07 02:32:06
+340              517            465 2015-01-07 01:43:35 2015-01-07 02:32:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+323              517            517 2015-01-07 01:33:52 2015-01-07 01:49:22
+324              517            517 2015-01-07 01:33:54 2015-01-07 01:49:27
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+326              517            517 2015-01-07 01:34:58 2015-01-07 01:49:44
+327              517            517 2015-01-07 01:35:11 2015-01-07 01:49:17
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+362              517            523 2015-01-07 01:54:04 2015-01-07 02:41:44
+363              517            523 2015-01-07 01:54:13 2015-01-07 02:41:57
+365              517            523 2015-01-07 01:54:31 2015-01-07 02:41:53
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+366              517            523 2015-01-07 01:54:39 2015-01-07 16:54:30
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+119              517            546 2015-01-07 00:17:52 2015-01-07 00:24:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+103              518            519 2015-01-07 00:15:51 2015-01-07 00:22:04
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+427              518            530 2015-01-07 03:00:31 2015-01-07 03:17:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+193              519            127 2015-01-07 00:41:42 2015-01-07 00:58:16
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+358              519            529 2015-01-07 01:52:45 2015-01-07 01:58:47
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+251              521            517 2015-01-07 01:00:14 2015-01-07 01:29:40
+252              521            517 2015-01-07 01:00:21 2015-01-07 01:29:13
+254              521            517 2015-01-07 01:01:05 2015-01-07 01:29:05
+256              521            517 2015-01-07 01:01:16 2015-01-07 01:29:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+461              522            479 2015-01-07 03:48:30 2015-01-07 03:54:42
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+246              523            470 2015-01-07 00:58:39 2015-01-07 01:07:36
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+328              523            470 2015-01-07 01:35:34 2015-01-07 01:43:06
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+405              523            479 2015-01-07 02:25:30 2015-01-07 02:31:52
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+232              525            276 2015-01-07 00:53:17 2015-01-07 01:26:31
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+167              527            263 2015-01-07 00:35:30 2015-01-07 00:54:59
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+16              527            491 2015-01-07 00:02:26 2015-01-07 00:10:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+391              527            507 2015-01-07 02:10:46 2015-01-07 02:21:09
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+230              528            518 2015-01-07 00:52:42 2015-01-07 00:55:03
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+330              529            507 2015-01-07 01:36:43 2015-01-07 02:02:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+206              530            499 2015-01-07 00:47:01 2015-01-07 00:54:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+187              531            307 2015-01-07 00:40:08 2015-01-07 00:44:19
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+280              531            307 2015-01-07 01:11:02 2015-01-07 01:17:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+403              531            312 2015-01-07 02:21:32 2015-01-07 02:23:40
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+151              531            340 2015-01-07 00:28:40 2015-01-07 00:33:14
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+456              531            393 2015-01-07 03:40:16 2015-01-07 03:51:37
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+345              534            438 2015-01-07 01:46:06 2015-01-07 02:13:45
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+205              537            465 2015-01-07 00:47:01 2015-01-07 00:59:36
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+38              537            483 2015-01-07 00:05:34 2015-01-07 00:13:58
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+25              537            495 2015-01-07 00:03:48 2015-01-07 00:16:03
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+37              537            536 2015-01-07 00:05:14 2015-01-07 00:10:38
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+295              539            218 2015-01-07 01:16:47 2015-01-07 01:39:07
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+313              539            282 2015-01-07 01:26:54 2015-01-07 01:33:58
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+491              545            167 2015-01-07 04:59:55 2015-01-07 05:07:08
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+80              545            341 2015-01-07 00:11:37 2015-01-07 00:28:59
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+468              545            428 2015-01-07 04:04:19 2015-01-07 04:10:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+325              545            518 2015-01-07 01:34:46 2015-01-07 01:41:07
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+50             2002            481 2015-01-07 00:07:26 2015-01-07 00:10:55
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+480             2003            290 2015-01-07 04:43:56 2015-01-07 04:59:12
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+53             2006            527 2015-01-07 00:07:39 2015-01-07 00:30:57
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+463             2009            463 2015-01-07 03:58:17 2015-01-07 04:14:33
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+159             2009            527 2015-01-07 00:32:13 2015-01-07 01:00:10
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+201             2010            151 2015-01-07 00:46:01 2015-01-07 00:49:22
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+139             2017            477 2015-01-07 00:24:53 2015-01-07 00:32:32
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+26             2017            492 2015-01-07 00:03:56 2015-01-07 00:17:44
+[1] ""
+   start.station.id end.station.id           starttime            stoptime
+22             2021            479 2015-01-07 00:03:16 2015-01-07 00:09:39
+[1] ""
+    start.station.id end.station.id           starttime            stoptime
+364             2021            479 2015-01-07 01:54:14 2015-01-07 01:56:27
+[1] ""
