@@ -29,20 +29,10 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
   return(TRUE)
 }
 
-GroupDataMethod1 <- function(data, start.thresh, stop.thresh) {
-  # Group data using method 1.
-  #
-  # Args
-  #   data: The data to be grouped.
-  #   start.thresh: Used in defining the groups (see description in SameGroup).
-  #   stop.thresh: Used in defining the groups (see description in SameGroup).
-  #
-  # Returns:
-  #   A list of data frames representing the resulting groups.
-}
-
-GroupDataMethod2 <- function(data, start.thresh, stop.thresh) {
-  # Group data using method 2.
+GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
+  # Groups the citibike data using method 1. Assumes that the data are sorted
+  # as follows: first by start station ID, then by end station ID, then by start
+  # time, and finally by stop time.
   #
   # Args
   #   data: The data to be grouped.
@@ -53,11 +43,31 @@ GroupDataMethod2 <- function(data, start.thresh, stop.thresh) {
   #   A list of data frames representing the resulting groups.
   
   groups <- list()
-  current.group <- data[1, ]
+  
+  
+  
+  return(groups)
+}
 
-  for (i in 2:nrow(data)) {
-    x <- data[i - 1, ]
-    y <- data[i, ]
+GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
+  # Groups the citibike data using method 2. Assumes that the data are sorted
+  # as follows: first by start station ID, then by end station ID, then by start
+  # time, and finally by stop time.
+  #
+  # Args
+  #   data: The data to be grouped.
+  #   start.thresh: Used in defining the groups (see description in SameGroup).
+  #   stop.thresh: Used in defining the groups (see description in SameGroup).
+  #
+  # Returns:
+  #   A list of data frames representing the resulting groups.
+  
+  groups <- list()
+  current.group <- citibike[1, ]
+
+  for (i in 2:nrow(citibike)) {
+    x <- citibike[i - 1, ]
+    y <- citibike[i, ]
     
     if (SameGroup(x, y, kStartThresh, kStopThresh)) {
       current.group <- rbind(current.group, y)
