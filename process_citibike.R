@@ -34,7 +34,7 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
   #
-  # Args
+  # Args:
   #   data: The data to be grouped.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
@@ -81,7 +81,7 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
   #
-  # Args
+  # Args:
   #   data: The data to be grouped.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
@@ -109,25 +109,43 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
   return(groups)
 }
 
+GetData <- function(data.file, nrows=-1, prepare=TRUE) {
+  # Reads in the citibike data, and prepares it for processing if specified.
+  #
+  # Args:
+  #   data.file: The file from which to read the data.
+  #   nrows: The number of observations (rows) to read from the data file.
+  #   prepare: Set to TRUE iff the data should be prepared for processing.
+  #
+  # Returns:
+  #   The (possibly prepared) data as a data frame object.
+  
+  citibike <- read.csv(data.file, stringsAsFactors=FALSE, nrows=nrows)
+  
+  if (prepare) {
+    # Convert the strings representing times in citibike to time objects.
+
+    kTimeFormat <- "%d/%m/%Y %H:%M:%S"
+
+    citibike <- within(citibike, {
+      starttime <- strptime(starttime, format=kTimeFormat)
+      stoptime <- strptime(stoptime, format=kTimeFormat)
+    })
+
+    # Order citibike as follows: first by start station ID, then by end station
+    # ID, then by start time, and finally by stop time.
+
+    citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
+                                              starttime, stoptime), ])
+  }
+  
+  return(citibike)
+}
+
 # Read in the data and place it in a data frame named citibike.
 
 kDataFile <- "201507-citibike-tripdata.csv"
-citibike <- read.csv(kDataFile, stringsAsFactors=FALSE, nrows=500)
-
-# Convert the strings representing times in citibike to time objects.
-
-kTimeFormat <- "%d/%m/%Y %H:%M:%S"
-
-citibike <- within(citibike, {
-  starttime <- strptime(starttime, format=kTimeFormat)
-  stoptime <- strptime(stoptime, format=kTimeFormat)
-})
-
-# Order citibike as follows: first by start station ID, then by end station
-# ID, then by start time, and finally by stop time.
-
-citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
-                                          starttime, stoptime), ])
+citibike <- GetData(kDataFile)
 
 # Start and stop time difference thresholds for use with SameGroup.
 kStartThresh <- 60
@@ -139,9 +157,10 @@ groups <- GroupDataMethod1(citibike, kStartThresh, kStopThresh)
 
 # Testing.
 
+if (FALSE) {
 for (g in groups) {
   print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
   print("")
 }
-
+}
 #citibike[c("start.station.id", "end.station.id", "starttime", "stoptime")]
