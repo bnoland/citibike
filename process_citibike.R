@@ -96,7 +96,7 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
     x <- citibike[i - 1, ]
     y <- citibike[i, ]
     
-    if (SameGroup(x, y, kStartThresh, kStopThresh)) {
+    if (SameGroup(x, y, start.thresh, stop.thresh)) {
       current.group <- rbind(current.group, y)
     } else {
       groups[[length(groups) + 1]] <- current.group
@@ -142,25 +142,34 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   return(citibike)
 }
 
+# Process the command line arguments.
+
+args <- commandArgs(trailingOnly=TRUE)
+if (length(args) < 1)
+  stop("Usage: Rscript process_citibike.R method data.file start.thresh stop.thresh nrows")
+
+# Extract the given values if present, and assign defaults otherwise.
+
+data.file    <- args[1]
+method       <- ifelse(length(args) < 2, 1,  args[2])
+start.thresh <- ifelse(length(args) < 3, 60, as.integer(args[3]))
+stop.thresh  <- ifelse(length(args) < 4, 60, as.integer(args[4]))
+nrows        <- ifelse(length(args) < 5, -1, as.integer(args[5]))
+
 # Read in the data and place it in a data frame named citibike.
 
-kDataFile <- "201507-citibike-tripdata.csv"
-citibike <- GetData(kDataFile)
-
-# Start and stop time difference thresholds for use with SameGroup.
-kStartThresh <- 60
-kStopThresh <- 60
+citibike <- GetData(data.file, nrows)
 
 # Divide the observations in citibike into groups.
 
-groups <- GroupDataMethod1(citibike, kStartThresh, kStopThresh)
+groups <- switch(method,
+            "1" = GroupDataMethod1(citibike, start.thresh, stop.thresh),
+            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh)
+          )
 
 # Testing.
 
-if (FALSE) {
 for (g in groups) {
   print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
   print("")
 }
-}
-#citibike[c("start.station.id", "end.station.id", "starttime", "stoptime")]
