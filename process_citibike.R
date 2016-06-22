@@ -29,6 +29,49 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
   return(TRUE)
 }
 
+GroupDataMethod1 <- function(data, start.thresh, stop.thresh) {
+  # Group data using method 1.
+  #
+  # Args
+  #   data: The data to be grouped.
+  #   start.thresh: Used in defining the groups (see description in SameGroup).
+  #   stop.thresh: Used in defining the groups (see description in SameGroup).
+  #
+  # Returns:
+  #   A list of data frames representing the resulting groups.
+}
+
+GroupDataMethod2 <- function(data, start.thresh, stop.thresh) {
+  # Group data using method 2.
+  #
+  # Args
+  #   data: The data to be grouped.
+  #   start.thresh: Used in defining the groups (see description in SameGroup).
+  #   stop.thresh: Used in defining the groups (see description in SameGroup).
+  #
+  # Returns:
+  #   A list of data frames representing the resulting groups.
+  
+  groups <- list()
+  current.group <- data[1, ]
+
+  for (i in 2:nrow(data)) {
+    x <- data[i - 1, ]
+    y <- data[i, ]
+    
+    if (SameGroup(x, y, kStartThresh, kStopThresh)) {
+      current.group <- rbind(current.group, y)
+    } else {
+      groups[[length(groups) + 1]] <- current.group
+      current.group <- y
+    }
+  }
+
+  groups[[length(groups) + 1]] <- current.group
+  
+  return(groups)
+}
+
 # Read in the data and place it in a data frame named citibike.
 
 kDataFile <- "201507-citibike-tripdata.csv"
@@ -53,26 +96,9 @@ citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
 kStartThresh <- 60
 kStopThresh <- 60
 
-# Divide the observations in citibike into groups defined by SameGroup.
-# TODO: There's a potential issue with this grouping algorithm that I only
-# realized after writing the damned thing.
+# Divide the observations in citibike into groups.
 
-groups <- list()
-current.group <- citibike[1, ]
-
-for (i in 2:nrow(citibike)) {
-  x <- citibike[i - 1, ]
-  y <- citibike[i, ]
-  
-  if (SameGroup(x, y, kStartThresh, kStopThresh)) {
-    current.group <- rbind(current.group, y)
-  } else {
-    groups[[length(groups) + 1]] <- current.group
-    current.group <- y
-  }
-}
-
-groups[[length(groups) + 1]] <- current.group
+groups <- GroupDataMethod2(citibike, kStartThresh, kStopThresh)
 
 # Testing.
 
