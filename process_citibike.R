@@ -146,7 +146,7 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
 
 args <- commandArgs(trailingOnly=TRUE)
 if (length(args) < 1)
-  stop("Usage: Rscript process_citibike.R method data.file start.thresh stop.thresh nrows")
+  stop("Usage: process_citibike.R method data.file start.thresh stop.thresh nrows")
 
 # Extract the given values if present, and assign defaults otherwise.
 
