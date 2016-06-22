@@ -44,7 +44,34 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
   
   groups <- list()
   
-  
+  for (i in 1:nrow(citibike)) {
+    x <- citibike[i, ]
+    current.group <- NULL
+    
+    # Classify the observations before x.
+    if (i > 1) {
+      for (j in (i - 1):1) {
+        y <- citibike[j, ]
+        if (!SameGroup(x, y, start.thresh, stop.thresh))
+          break
+        current.group <- rbind(current.group, y)
+      }
+    }
+    
+    current.group <- rbind(current.group, x)
+    
+    # Classify the observations after x.
+    if (i < nrow(citibike)) {
+      for (j in (i + 1):nrow(citibike)) {
+        y <- citibike[j, ]
+        if (!SameGroup(x, y, start.thresh, stop.thresh))
+          break
+        current.group <- rbind(current.group, y)
+      }
+    }
+    
+    groups[[length(groups) + 1]] <- current.group
+  }
   
   return(groups)
 }
@@ -108,7 +135,7 @@ kStopThresh <- 60
 
 # Divide the observations in citibike into groups.
 
-groups <- GroupDataMethod2(citibike, kStartThresh, kStopThresh)
+groups <- GroupDataMethod1(citibike, kStartThresh, kStopThresh)
 
 # Testing.
 
