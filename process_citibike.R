@@ -164,7 +164,8 @@ citibike <- GetData(data.file, nrows)
 
 groups <- switch(method,
             "1" = GroupDataMethod1(citibike, start.thresh, stop.thresh),
-            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh)
+            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh),
+            stop("Invalid method number.")
           )
 
 # Testing.
