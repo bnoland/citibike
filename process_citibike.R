@@ -29,7 +29,7 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
   return(TRUE)
 }
 
-GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
+GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh, show.progress) {
   # Groups the citibike data using method 1. Assumes that the data are sorted
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
@@ -38,6 +38,7 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
   #   data: The data to be grouped.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
+  #   show.progress: Set to TRUE if progress information should be outputted.
   #
   # Returns:
   #   A list of data frames representing the resulting groups.
@@ -45,6 +46,9 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
   groups <- list()
   
   for (i in 1:nrow(citibike)) {
+    if (show.progress)
+      ShowProgress(i, citibike)
+    
     x <- citibike[i, ]
     current.group <- NULL
     
@@ -76,7 +80,22 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh) {
   return(groups)
 }
 
-GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
+ShowProgress <- function(i, citibike) {
+  # Prints progress information (current observation number and percent
+  # completion) to stderr.
+  #
+  # Args:
+  #   i: Current observation number.
+  #   citibike: The citibike data frame.
+  
+  n <- nrow(citibike)
+  percent <- (i / n) * 100
+  
+  cat("Processing observation ", i, " of ", n, " (", percent, "% complete)\n",
+      sep="", file=stderr())
+}
+
+GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress) {
   # Groups the citibike data using method 2. Assumes that the data are sorted
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
@@ -85,14 +104,22 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh) {
   #   data: The data to be grouped.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
+  #   show.progress: Set to TRUE if progress information should be outputted.
   #
   # Returns:
   #   A list of data frames representing the resulting groups.
   
   groups <- list()
+  
+  if (show.progress)
+    ShowProgress(1, citibike)
+  
   current.group <- citibike[1, ]
 
   for (i in 2:nrow(citibike)) {
+    if (show.progress)
+      ShowProgress(i, citibike)
+    
     x <- citibike[i - 1, ]
     y <- citibike[i, ]
     
@@ -115,7 +142,7 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   # Args:
   #   data.file: The file from which to read the data.
   #   nrows: The number of observations (rows) to read from the data file.
-  #   prepare: Set to TRUE iff the data should be prepared for processing.
+  #   prepare: Set to TRUE if the data should be prepared for processing.
   #
   # Returns:
   #   The (possibly prepared) data as a data frame object.
@@ -125,13 +152,13 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   if (prepare) {
     # Convert the strings representing times in citibike to time objects.
 
-    kTimeFormat <- "%d/%m/%Y %H:%M:%S"
+    kTimeFormat <- "%m/%d/%Y %H:%M:%S"
 
     citibike <- within(citibike, {
       starttime <- strptime(starttime, format=kTimeFormat)
       stoptime <- strptime(stoptime, format=kTimeFormat)
     })
-
+    
     # Order citibike as follows: first by start station ID, then by end station
     # ID, then by start time, and finally by stop time.
 
@@ -146,15 +173,16 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
 
 args <- commandArgs(trailingOnly=TRUE)
 if (length(args) < 1)
-  stop("Usage: process_citibike.R data.file method start.thresh stop.thresh nrows")
+  stop("Usage: process_citibike.R data.file method start.thresh stop.thresh nrows show.progress")
 
 # Extract the given values if present, and assign defaults otherwise.
 
-data.file    <- args[1]
-method       <- ifelse(length(args) < 2, 1,  args[2])
-start.thresh <- ifelse(length(args) < 3, 60, as.integer(args[3]))
-stop.thresh  <- ifelse(length(args) < 4, 60, as.integer(args[4]))
-nrows        <- ifelse(length(args) < 5, -1, as.integer(args[5]))
+data.file     <- args[1]
+method        <- ifelse(length(args) < 2, 1,    args[2])
+start.thresh  <- ifelse(length(args) < 3, 60,   as.integer(args[3]))
+stop.thresh   <- ifelse(length(args) < 4, 60,   as.integer(args[4]))
+nrows         <- ifelse(length(args) < 5, -1,   as.integer(args[5]))
+show.progress <- ifelse(length(args) < 6, TRUE, as.logical(args[6]))
 
 # Read in the data and place it in a data frame named citibike.
 
@@ -163,8 +191,8 @@ citibike <- GetData(data.file, nrows)
 # Divide the observations in citibike into groups.
 
 groups <- switch(method,
-            "1" = GroupDataMethod1(citibike, start.thresh, stop.thresh),
-            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh),
+            "1" = GroupDataMethod1(citibike, start.thresh, stop.thresh, show.progress),
+            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh, show.progress),
             stop("Invalid method number.")
           )
 
