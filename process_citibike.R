@@ -204,7 +204,7 @@ FlattenGroups <- function(groups) {
 --method METHOD       Specify grouping method to use.
 --start-thresh START  Specify start time difference threshold.
 --stop-thresh STOP    Specify stop time difference threshold.
---nrows N             Specify number of rows to read from the data file.
+--nrows N             Specify number of rows to read from the start of the data file.
 --show-progress       Show progress." -> doc
 
 options <- docopt(doc)
