@@ -215,7 +215,7 @@ if (options[["help"]]) {
 }
 
 # Extract the given values if present, and assign defaults otherwise.
-# TODO: Check if given values are valid.
+# TODO: More stringent error checking?
 
 data.file     <- options[["data-file"]]
 method        <- ifelse(is.null(options[["method"]]),      "1", options[["method"]])
@@ -236,11 +236,21 @@ groups <- switch(method,
             stop("Invalid method number.")
           )
 
-# Testing.
+# Flatten the groups into a single data set and write it to a CSV file on
+# stdout.
+# TODO: This is the only functionality for now. We should be able to control
+# the output of this script (data, statistics, or whatever) via command line
+# options.
 
-#write.csv(FlattenGroups(groups))
+write.csv(FlattenGroups(groups))
+
+if (FALSE) {
+
+# Testing.
 
 for (g in groups) {
   print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
   print("")
+}
+
 }
