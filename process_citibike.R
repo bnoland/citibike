@@ -115,22 +115,24 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress)
     ShowProgress(1, citibike)
   
   current.group <- citibike[1, ]
-
-  for (i in 2:nrow(citibike)) {
-    if (show.progress)
-      ShowProgress(i, citibike)
-    
-    x <- citibike[i - 1, ]
-    y <- citibike[i, ]
-    
-    if (SameGroup(x, y, start.thresh, stop.thresh)) {
-      current.group <- rbind(current.group, y)
-    } else {
-      groups[[length(groups) + 1]] <- current.group
-      current.group <- y
+  
+  if (nrow(citibike) > 1) {
+    for (i in 2:nrow(citibike)) {
+      if (show.progress)
+        ShowProgress(i, citibike)
+      
+      x <- citibike[i - 1, ]
+      y <- citibike[i, ]
+      
+      if (SameGroup(x, y, start.thresh, stop.thresh)) {
+        current.group <- rbind(current.group, y)
+      } else {
+        groups[[length(groups) + 1]] <- current.group
+        current.group <- y
+      }
     }
   }
-
+  
   groups[[length(groups) + 1]] <- current.group
   
   return(groups)
@@ -147,11 +149,12 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   # Returns:
   #   The (possibly prepared) data as a data frame object.
   
-  citibike <- read.csv(data.file, stringsAsFactors=FALSE, nrows=nrows)
+  citibike <- read.csv(data.file, as.is=TRUE, nrows=nrows)
   
   if (prepare) {
     # Convert the strings representing times in citibike to time objects.
-
+    # TODO: Some data sets use different time formats -- handle this.
+    
     kTimeFormat <- "%m/%d/%Y %H:%M:%S"
 
     citibike <- within(citibike, {
@@ -169,6 +172,28 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   return(citibike)
 }
 
+FlattenGroups <- function(groups) {
+  # Flatten a list of groups into a single data frame, labeling each entry with
+  # a corresponding group ID.
+  #
+  # Args:
+  #   groups: The groups to flatten.
+  #
+  # Returns:
+  #   The flattened data in the form of a data frame.
+  
+  flattened <- NULL
+  id <- 1
+  
+  for (g in groups) {
+    g[, "group.id"] <- id
+    flattened <- rbind(flattened, g)
+    id <- id + 1
+  }
+  
+  return(flattened)
+}
+
 # Process the command line arguments.
 
 args <- commandArgs(trailingOnly=TRUE)
@@ -176,6 +201,8 @@ if (length(args) < 1)
   stop("Usage: process_citibike.R data.file method start.thresh stop.thresh nrows show.progress")
 
 # Extract the given values if present, and assign defaults otherwise.
+# TODO: Check if given values are valid.
+# TODO: Allow parameters to be set selectively (e.g., start.thresh=100)
 
 data.file     <- args[1]
 method        <- ifelse(length(args) < 2, 1,    args[2])
@@ -198,7 +225,11 @@ groups <- switch(method,
 
 # Testing.
 
+write.csv(FlattenGroups(groups))
+
+if (FALSE) {
 for (g in groups) {
   print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
   print("")
+}
 }
