@@ -1,3 +1,4 @@
+library(docopt)
 
 SameGroup <- function(x, y, start.thresh, stop.thresh) {
   # Are two observations in the same group?
@@ -196,20 +197,32 @@ FlattenGroups <- function(groups) {
 
 # Process the command line arguments.
 
-args <- commandArgs(trailingOnly=TRUE)
-if (length(args) < 1)
-  stop("Usage: process_citibike.R data.file method start.thresh stop.thresh nrows show.progress")
+"Usage: process_citibike.R (--data-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
+
+--help                Show this.
+--data-file FILE      Specify data file.
+--method METHOD       Specify grouping method to use.
+--start-thresh START  Specify start time difference threshold.
+--stop-thresh STOP    Specify stop time difference threshold.
+--nrows N             Specify number of rows to read from the data file.
+--show-progress       Show progress." -> doc
+
+options <- docopt(doc)
+
+if (options[["help"]]) {
+  cat(doc)
+  quit()
+}
 
 # Extract the given values if present, and assign defaults otherwise.
 # TODO: Check if given values are valid.
-# TODO: Allow parameters to be set selectively (e.g., start.thresh=100)
 
-data.file     <- args[1]
-method        <- ifelse(length(args) < 2, 1,    args[2])
-start.thresh  <- ifelse(length(args) < 3, 60,   as.integer(args[3]))
-stop.thresh   <- ifelse(length(args) < 4, 60,   as.integer(args[4]))
-nrows         <- ifelse(length(args) < 5, -1,   as.integer(args[5]))
-show.progress <- ifelse(length(args) < 6, TRUE, as.logical(args[6]))
+data.file     <- options[["data-file"]]
+method        <- ifelse(is.null(options[["method"]]),      "1", options[["method"]])
+start.thresh  <- ifelse(is.null(options[["start-thresh"]]), 60, as.integer(options[["start-thresh"]]))
+stop.thresh   <- ifelse(is.null(options[["stop-thresh"]]),  60, as.integer(options[["stop-thresh"]]))
+nrows         <- ifelse(is.null(options[["nrows"]]),        -1, as.integer(options[["nrows"]]))
+show.progress <- options[["show-progress"]]
 
 # Read in the data and place it in a data frame named citibike.
 
@@ -225,11 +238,9 @@ groups <- switch(method,
 
 # Testing.
 
-write.csv(FlattenGroups(groups))
+#write.csv(FlattenGroups(groups))
 
-if (FALSE) {
 for (g in groups) {
   print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
   print("")
-}
 }
