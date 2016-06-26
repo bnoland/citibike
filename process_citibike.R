@@ -1,3 +1,8 @@
+# Citi Bike trip data processing script.
+# TODO: This code could use a serious review. I'm sure a lot of this stuff could
+# be done more efficiently, but I'm not experienced enough with R yet to know
+# how to go about it.
+
 library(docopt)
 
 SameGroup <- function(x, y, start.thresh, stop.thresh) {
