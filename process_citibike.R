@@ -2,8 +2,10 @@
 # TODO: This code could use a serious review. I'm sure a lot of this stuff could
 # be done more efficiently, but I'm not experienced enough with R yet to know
 # how to go about it.
+# TODO: Should this be a multipurpose script?
 
 library(docopt)
+library(data.table)
 
 SameGroup <- function(x, y, start.thresh, stop.thresh) {
   # Are two observations in the same group?
@@ -19,16 +21,16 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
   # Returns:
   #   TRUE if x and y are in the same group, FALSE otherwise.
   
-  if (x[, "start.station.id"] != y[, "start.station.id"])
+  if (x$start.station.id != y$start.station.id)
     return(FALSE)
-  if (x[, "end.station.id"] != y[, "end.station.id"])
+  if (x$end.station.id != y$end.station.id)
     return(FALSE)
   
-  diff <- as.numeric(difftime(x[, "starttime"], y[, "starttime"], units="secs"))
+  diff <- as.numeric(difftime(x$starttime, y$starttime, units="secs"))
   if (abs(diff) > start.thresh)
     return(FALSE)
   
-  diff <- as.numeric(difftime(x[, "stoptime"], y[, "stoptime"], units="secs"))
+  diff <- as.numeric(difftime(x$stoptime, y$stoptime, units="secs"))
   if (abs(diff) > stop.thresh)
     return(FALSE)
   
@@ -50,10 +52,10 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh, show.progress)
   #   A list of data frames representing the resulting groups.
   
   groups <- list()
+  group.id <- 1
   
   for (i in 1:nrow(citibike)) {
-    if (show.progress)
-      ShowProgress(i, citibike)
+    ShowProgress(i, citibike, show.progress)
     
     x <- citibike[i, ]
     current.group <- NULL
@@ -80,25 +82,13 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh, show.progress)
       }
     }
     
+    current.group$group.id <- group.id
+    group.id <- group.id + 1
+    
     groups[[length(groups) + 1]] <- current.group
   }
   
   return(groups)
-}
-
-ShowProgress <- function(i, citibike) {
-  # Prints progress information (current observation number and percent
-  # completion) to stderr.
-  #
-  # Args:
-  #   i: Current observation number.
-  #   citibike: The citibike data frame.
-  
-  n <- nrow(citibike)
-  percent <- (i / n) * 100
-  
-  cat("Processing observation ", i, " of ", n, " (", percent, "% complete)\n",
-      sep="", file=stderr())
 }
 
 GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress) {
@@ -116,16 +106,15 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress)
   #   A list of data frames representing the resulting groups.
   
   groups <- list()
+  group.id <- 1
   
-  if (show.progress)
-    ShowProgress(1, citibike)
+  ShowProgress(1, citibike, show.progress)
   
   current.group <- citibike[1, ]
   
   if (nrow(citibike) > 1) {
     for (i in 2:nrow(citibike)) {
-      if (show.progress)
-        ShowProgress(i, citibike)
+      ShowProgress(i, citibike, show.progress)
       
       x <- citibike[i - 1, ]
       y <- citibike[i, ]
@@ -133,15 +122,41 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress)
       if (SameGroup(x, y, start.thresh, stop.thresh)) {
         current.group <- rbind(current.group, y)
       } else {
+        # At the end of the current group.
+        
+        current.group$group.id <- group.id
+        group.id <- group.id + 1
+        
         groups[[length(groups) + 1]] <- current.group
         current.group <- y
       }
     }
   }
   
+  current.group$group.id <- group.id
   groups[[length(groups) + 1]] <- current.group
   
   return(groups)
+}
+
+ShowProgress <- function(i, citibike, show.output=TRUE) {
+  # Prints progress information (current observation number and percent
+  # completion) to stderr.
+  #
+  # Args:
+  #   i: Current observation number.
+  #   citibike: The citibike data frame.
+  #   show.output: If set to TRUE, progress information is outputted, otherwise
+  #                nothing is displayed.
+  
+  if (!show.output)
+    return()
+  
+  n <- nrow(citibike)
+  percent <- (i / n) * 100
+  
+  cat("Processing observation ", i, " of ", n, " (", percent, "% complete)\n",
+      sep="", file=stderr())
 }
 
 GetData <- function(data.file, nrows=-1, prepare=TRUE) {
@@ -154,6 +169,8 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
   #
   # Returns:
   #   The (possibly prepared) data as a data frame object.
+  
+  # TODO: Maybe get rid of this function?
   
   citibike <- read.csv(data.file, as.is=TRUE, nrows=nrows)
   
@@ -173,6 +190,10 @@ GetData <- function(data.file, nrows=-1, prepare=TRUE) {
 
     citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
                                               starttime, stoptime), ])
+    
+    # Create a column for holding group IDs.
+    
+    citibike$group.id <- NULL
   }
   
   return(citibike)
@@ -188,14 +209,18 @@ FlattenGroups <- function(groups) {
   # Returns:
   #   The flattened data in the form of a data frame.
   
-  flattened <- NULL
-  id <- 1
+  # data.table doesn't like the POSIXlt type, so convert all our times to
+  # strings for now.
+  # TODO: Apparently data.table has a replacement type called IDateTime. Maybe
+  # use this instead?
   
-  for (g in groups) {
-    g[, "group.id"] <- id
-    flattened <- rbind(flattened, g)
-    id <- id + 1
-  }
+  groups <- lapply(groups, function(group) {
+    group$starttime <- as.character(group$starttime)
+    group$stoptime <- as.character(group$stoptime)
+    return(group)
+  })
+  
+  flattened <- rbindlist(groups)
   
   return(flattened)
 }
@@ -243,9 +268,6 @@ groups <- switch(method,
 
 # Flatten the groups into a single data set and write it to a CSV file on
 # stdout.
-# TODO: This is the only functionality for now. We should be able to control
-# the output of this script (data, statistics, or whatever) via command line
-# options.
 
 write.csv(FlattenGroups(groups))
 
@@ -254,7 +276,7 @@ if (FALSE) {
 # Testing.
 
 for (g in groups) {
-  print(g[c("start.station.id", "end.station.id", "starttime", "stoptime")])
+  print(g[c("start.station.id", "end.station.id", "starttime", "stoptime", "group.id")])
   print("")
 }
 
