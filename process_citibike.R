@@ -2,10 +2,8 @@
 # TODO: This code could use a serious review. I'm sure a lot of this stuff could
 # be done more efficiently, but I'm not experienced enough with R yet to know
 # how to go about it.
-# TODO: Should this be a multipurpose script?
 
 library(docopt)
-library(data.table)
 
 SameGroup <- function(x, y, start.thresh, stop.thresh) {
   # Are two observations in the same group?
@@ -37,21 +35,34 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
   return(TRUE)
 }
 
-GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh, show.progress) {
+OutputGroup <- function(group, f) {
+  # Output a single group to a CSV file.
+  #
+  # Args:
+  #   group: The group to output.
+  #   f: A connection to the file to output to.
+  
+  write.table(group, file=f, col.names=FALSE, append=TRUE,
+              sep=",", dec=".", qmethod="double")
+}
+
+OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, show.progress) {
   # Groups the citibike data using method 1. Assumes that the data are sorted
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
   #
   # Args:
-  #   data: The data to be grouped.
+  #   citibike: The data to be grouped.
+  #   out.file: The file where the output will be stored.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
   #   show.progress: Set to TRUE if progress information should be outputted.
-  #
-  # Returns:
-  #   A list of data frames representing the resulting groups.
   
-  groups <- list()
+  f <- file(out.file, open="w")
+  
+  # Write out the column names.
+  write.csv(citibike[0, ], file=f)
+  
   group.id <- 1
   
   for (i in 1:nrow(citibike)) {
@@ -85,27 +96,29 @@ GroupDataMethod1 <- function(citibike, start.thresh, stop.thresh, show.progress)
     current.group$group.id <- group.id
     group.id <- group.id + 1
     
-    groups[[length(groups) + 1]] <- current.group
+    OutputGroup(current.group, f)
   }
   
-  return(groups)
+  close(f)
 }
 
-GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress) {
+OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, show.progress) {
   # Groups the citibike data using method 2. Assumes that the data are sorted
   # as follows: first by start station ID, then by end station ID, then by start
   # time, and finally by stop time.
   #
   # Args:
-  #   data: The data to be grouped.
+  #   citibike: The data to be grouped.
+  #   out.file: The file where the output will be stored.
   #   start.thresh: Used in defining the groups (see description in SameGroup).
   #   stop.thresh: Used in defining the groups (see description in SameGroup).
   #   show.progress: Set to TRUE if progress information should be outputted.
-  #
-  # Returns:
-  #   A list of data frames representing the resulting groups.
   
-  groups <- list()
+  f <- file(out.file, open="w")
+  
+  # Write out the column names.
+  write.csv(citibike[0, ], file=f)
+  
   group.id <- 1
   
   ShowProgress(1, citibike, show.progress)
@@ -127,16 +140,18 @@ GroupDataMethod2 <- function(citibike, start.thresh, stop.thresh, show.progress)
         current.group$group.id <- group.id
         group.id <- group.id + 1
         
-        groups[[length(groups) + 1]] <- current.group
+        OutputGroup(current.group, f)
+        
         current.group <- y
       }
     }
   }
   
   current.group$group.id <- group.id
-  groups[[length(groups) + 1]] <- current.group
   
-  return(groups)
+  OutputGroup(current.group, f)
+  
+  close(f)
 }
 
 ShowProgress <- function(i, citibike, show.output=TRUE) {
@@ -159,78 +174,13 @@ ShowProgress <- function(i, citibike, show.output=TRUE) {
       sep="", file=stderr())
 }
 
-GetData <- function(data.file, nrows=-1, prepare=TRUE) {
-  # Reads in the citibike data, and prepares it for processing if specified.
-  #
-  # Args:
-  #   data.file: The file from which to read the data.
-  #   nrows: The number of observations (rows) to read from the data file.
-  #   prepare: Set to TRUE if the data should be prepared for processing.
-  #
-  # Returns:
-  #   The (possibly prepared) data as a data frame object.
-  
-  # TODO: Maybe get rid of this function?
-  
-  citibike <- read.csv(data.file, as.is=TRUE, nrows=nrows)
-  
-  if (prepare) {
-    # Convert the strings representing times in citibike to time objects.
-    # TODO: Some data sets use different time formats -- handle this.
-    
-    kTimeFormat <- "%m/%d/%Y %H:%M:%S"
-
-    citibike <- within(citibike, {
-      starttime <- strptime(starttime, format=kTimeFormat)
-      stoptime <- strptime(stoptime, format=kTimeFormat)
-    })
-    
-    # Order citibike as follows: first by start station ID, then by end station
-    # ID, then by start time, and finally by stop time.
-
-    citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
-                                              starttime, stoptime), ])
-    
-    # Create a column for holding group IDs.
-    
-    citibike$group.id <- NULL
-  }
-  
-  return(citibike)
-}
-
-FlattenGroups <- function(groups) {
-  # Flatten a list of groups into a single data frame, labeling each entry with
-  # a corresponding group ID.
-  #
-  # Args:
-  #   groups: The groups to flatten.
-  #
-  # Returns:
-  #   The flattened data in the form of a data frame.
-  
-  # data.table doesn't like the POSIXlt type, so convert all our times to
-  # strings for now.
-  # TODO: Apparently data.table has a replacement type called IDateTime. Maybe
-  # use this instead?
-  
-  groups <- lapply(groups, function(group) {
-    group$starttime <- as.character(group$starttime)
-    group$stoptime <- as.character(group$stoptime)
-    return(group)
-  })
-  
-  flattened <- rbindlist(groups)
-  
-  return(flattened)
-}
-
 # Process the command line arguments.
 
-"Usage: process_citibike.R (--data-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
+"Usage: process_citibike.R (--in-file FILE) (--out-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
 
 --help                Show this.
---data-file FILE      Specify data file.
+--in-file FILE        Specify input file.
+--out-file FILE       Specify output file.
 --method METHOD       Specify grouping method to use.
 --start-thresh START  Specify start time difference threshold.
 --stop-thresh STOP    Specify stop time difference threshold.
@@ -247,7 +197,8 @@ if (options[["help"]]) {
 # Extract the given values if present, and assign defaults otherwise.
 # TODO: More stringent error checking?
 
-data.file     <- options[["data-file"]]
+in.file       <- options[["in-file"]]
+out.file      <- options[["out-file"]]
 method        <- ifelse(is.null(options[["method"]]),      "1", options[["method"]])
 start.thresh  <- ifelse(is.null(options[["start-thresh"]]), 60, as.integer(options[["start-thresh"]]))
 stop.thresh   <- ifelse(is.null(options[["stop-thresh"]]),  60, as.integer(options[["stop-thresh"]]))
@@ -256,28 +207,35 @@ show.progress <- options[["show-progress"]]
 
 # Read in the data and place it in a data frame named citibike.
 
-citibike <- GetData(data.file, nrows)
+citibike <- read.csv(in.file, as.is=TRUE, nrows=nrows)
 
-# Divide the observations in citibike into groups.
+# Convert the strings representing times in citibike to time objects.
+# TODO: Some data sets use different time formats -- handle this.
 
-groups <- switch(method,
-            "1" = GroupDataMethod1(citibike, start.thresh, stop.thresh, show.progress),
-            "2" = GroupDataMethod2(citibike, start.thresh, stop.thresh, show.progress),
-            stop("Invalid method number.")
-          )
+kTimeFormat <- "%m/%d/%Y %H:%M:%S"
 
-# Flatten the groups into a single data set and write it to a CSV file on
-# stdout.
+citibike <- within(citibike, {
+  starttime <- strptime(starttime, format=kTimeFormat)
+  stoptime <- strptime(stoptime, format=kTimeFormat)
+})
 
-write.csv(FlattenGroups(groups))
+# Order citibike as follows: first by start station ID, then by end station
+# ID, then by start time, and finally by stop time.
 
-if (FALSE) {
+citibike <- with(citibike, citibike[order(start.station.id, end.station.id,
+                                          starttime, stoptime), ])
 
-# Testing.
+# Create a column for holding group IDs.
 
-for (g in groups) {
-  print(g[c("start.station.id", "end.station.id", "starttime", "stoptime", "group.id")])
-  print("")
-}
+citibike$group.id <- NA
 
+# Divide the observations in citibike into groups and output the results to a
+# file specified by out.file.
+
+if (method == "1") {
+  OutputGroupedData1(citibike, out.file, start.thresh, stop.thresh, show.progress)
+} else if (method == "2") {
+  OutputGroupedData2(citibike, out.file, start.thresh, stop.thresh, show.progress)
+} else {
+  stop("Invalid method number.")
 }
