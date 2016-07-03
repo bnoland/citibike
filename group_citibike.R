@@ -47,9 +47,9 @@ OutputGroup <- function(group, f) {
 }
 
 OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, show.progress) {
-  # Groups the citibike data using method 1. Assumes that the data are sorted
-  # as follows: first by start station ID, then by end station ID, then by start
-  # time, and finally by stop time.
+  # Groups the citibike data using method 1 (see README.md). Assumes that the
+  # data are sorted as follows: first by start station ID, then by end station
+  # ID, then by start time, and finally by stop time.
   #
   # Args:
   #   citibike: The data to be grouped.
@@ -70,7 +70,7 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
     ShowProgress(i, citibike, show.progress)
     
     x <- citibike[i, ]
-    current.group <- NULL
+    current.group <- x
     
     # Classify the observations before x.
     if (i > 1) {
@@ -81,8 +81,6 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
         current.group <- rbind(current.group, y)
       }
     }
-    
-    current.group <- rbind(current.group, x)
     
     # Classify the observations after x.
     if (i < nrow(citibike)) {
@@ -97,7 +95,6 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
     # Ignore the current group if it's the same as the last group.
     current.row.names <- rownames(current.group)
     if (!is.null(last.row.names)
-        && length(current.row.names) == length(last.row.names)
         && setequal(current.row.names, last.row.names)) {
       next
     }
@@ -116,9 +113,9 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
 }
 
 OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, show.progress) {
-  # Groups the citibike data using method 2. Assumes that the data are sorted
-  # as follows: first by start station ID, then by end station ID, then by start
-  # time, and finally by stop time.
+  # Groups the citibike data using method 2 (see README.md). Assumes that the
+  # data are sorted as follows: first by start station ID, then by end station
+  # ID, then by start time, and finally by stop time.
   #
   # Args:
   #   citibike: The data to be grouped.
@@ -191,7 +188,7 @@ ShowProgress <- function(i, citibike, show.output=TRUE) {
 
 # Process the command line arguments.
 
-"Usage: process_citibike.R (--in-file FILE) (--out-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
+"Usage: group_citibike.R (--in-file FILE) (--out-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
 
 --help                Show this.
 --in-file FILE        Specify input file.
