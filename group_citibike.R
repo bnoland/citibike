@@ -160,6 +160,7 @@ OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, sh
   }
   
   current.group$group.id <- group.id
+  current.group$group.member.id <- 1:nrow(current.group)
   
   OutputGroup(current.group, f)
   
