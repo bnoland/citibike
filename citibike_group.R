@@ -192,7 +192,7 @@ ShowProgress <- function(i, citibike, show.output=TRUE) {
 
 # Process the command line arguments.
 
-"Usage: group_citibike.R (--in-file FILE) (--out-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
+"Usage: citibike_group.R (--in-file FILE) (--out-file FILE) [--method METHOD] [--start-thresh START] [--stop-thresh STOP] [--nrows N] [--show-progress]
 
 --help                Show this.
 --in-file FILE        Specify input file.
