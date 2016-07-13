@@ -21,8 +21,41 @@ in.file <- options[["in-file"]]
 col.classes <- c(rep("NULL", 13), rep(NA, 6))
 citibike <- read.csv(in.file, as.is=TRUE, colClasses=col.classes)
 
-# Subscriber indicator.
-citibike$subscriber <- citibike$usertype == "Subscriber"
+# Calculate gender and user type proportions for each group size.
+
+gender.props <- NULL
+user.type.props <- NULL
+
+for (n in 1:max(citibike$groupsize)) {
+  total <- sum(citibike$groupsize == n)
+  
+  # Calculate user type proportions.
+  
+  nsubscriber <- sum(citibike$groupsize == n & citibike$usertype == "Subscriber")
+  ncustomer   <- total - nsubscriber
+  
+  entry <- data.frame(total, subscriber=nsubscriber / total,
+                             customer=ncustomer / total)
+  
+  user.type.props <- rbind(user.type.props, entry)
+  
+  # Calculate gender proportions.
+  
+  nmale     <- sum(citibike$groupsize == n & citibike$gender == 1)
+  nfemale   <- sum(citibike$groupsize == n & citibike$gender == 2)
+  nunknown  <- total - nmale - nfemale
+  
+  entry <- data.frame(total, unknown=nunknown / total,
+                             male=nmale / total,
+                             female=nfemale / total)
+  
+  gender.props <- rbind(gender.props, entry)
+}
+
+gender.props
+user.type.props
+
+if (FALSE) {
 
 # Place the data in a wide format for convenience.
 citibike <- reshape(citibike, idvar="groupid", timevar="groupmemberid",
@@ -38,4 +71,5 @@ citibike$nunknown <- apply(gender.cols, 1, function(x) length(which(x == 0)))
 citibike$nmales   <- apply(gender.cols, 1, function(x) length(which(x == 1)))
 citibike$nfemales <- apply(gender.cols, 1, function(x) length(which(x == 2)))
 
-write.csv(citibike)
+#write.csv(citibike)
+}
