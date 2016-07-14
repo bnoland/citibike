@@ -26,12 +26,15 @@ citibike <- read.csv(in.file, as.is=TRUE, colClasses=col.classes)
 gender.props <- NULL
 user.type.props <- NULL
 
-for (n in 1:max(citibike$groupsize)) {
-  total <- sum(citibike$groupsize == n)
+max.group.size <- max(citibike$groupsize)
+
+for (n in 1:max.group.size) {
+  relevant <- citibike[citibike$groupsize == n, ]
+  total <- nrow(relevant)
   
   # Calculate user type proportions.
   
-  nsubscriber <- sum(citibike$groupsize == n & citibike$usertype == "Subscriber")
+  nsubscriber <- sum(relevant$usertype == "Subscriber")
   ncustomer   <- total - nsubscriber
   
   entry <- data.frame(total, subscriber=nsubscriber / total,
@@ -41,8 +44,8 @@ for (n in 1:max(citibike$groupsize)) {
   
   # Calculate gender proportions.
   
-  nmale     <- sum(citibike$groupsize == n & citibike$gender == 1)
-  nfemale   <- sum(citibike$groupsize == n & citibike$gender == 2)
+  nmale     <- sum(relevant$gender == 1)
+  nfemale   <- sum(relevant$gender == 2)
   nunknown  <- total - nmale - nfemale
   
   entry <- data.frame(total, unknown=nunknown / total,
@@ -52,14 +55,9 @@ for (n in 1:max(citibike$groupsize)) {
   gender.props <- rbind(gender.props, entry)
 }
 
-gender.props
-user.type.props
-
-if (FALSE) {
-
 # Place the data in a wide format for convenience.
 citibike <- reshape(citibike, idvar="groupid", timevar="groupmemberid",
-                    v.names=c("usertype", "birthyear", "gender", "subscriber"),
+                    v.names=c("usertype", "birthyear", "gender"),
                     direction="wide")
 
 # Calculate counts for each gender type (unknown=0, male=1, female=2).
@@ -71,5 +69,19 @@ citibike$nunknown <- apply(gender.cols, 1, function(x) length(which(x == 0)))
 citibike$nmales   <- apply(gender.cols, 1, function(x) length(which(x == 1)))
 citibike$nfemales <- apply(gender.cols, 1, function(x) length(which(x == 2)))
 
-#write.csv(citibike)
+for (n in 1:max.group.size) {
+  relevant <- citibike[citibike$groupsize == n, ]
+  total <- nrow(relevant)
+  
+  gender.props <- NULL
+  
+  for (k in 0:n) {
+    # Count of groups with k males and (n-k) females.
+    count <- sum(relevant$nmales == k & relevant$nfemales == n-k)
+    
+    entry <- data.frame(count, prop=count / total)
+    gender.props <- rbind(gender.props, entry)
+  }
+  
+  print(gender.props)
 }
