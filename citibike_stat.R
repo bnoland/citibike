@@ -18,12 +18,13 @@ Round <- function(df, ndigits) {
 
 # Process the command line arguments.
 
-"Usage: citibike_stat.R (--in-file FILE) (--data-year YEAR) [--ndigits N]
+"Usage: citibike_stat.R (--in-file FILE) (--out-file FILE) (--data-year YEAR) [--ndigits N]
 
 --help                Show this.
 --in-file FILE        Specify input file.
---data-year YEAR      The year this data was collected.
---ndigits N           The number of decimal places to show in output." -> doc
+--out-file FILE       Specify output file.
+--data-year YEAR      Specify year this data was collected.
+--ndigits N           Specify number of decimal places to show in output." -> doc
 
 options <- docopt(doc)
 
@@ -33,6 +34,7 @@ if (options[["help"]]) {
 }
 
 in.file   <- options[["in-file"]]
+out.file  <- options[["out-file"]]
 data.year <- as.integer(options[["data-year"]])
 ndigits   <- ifelse(is.null(options[["ndigits"]]), 3, as.integer(options[["ndigits"]]))
 
@@ -134,8 +136,15 @@ for (n in 1:max.group.size) {
   age.stats <- rbind(age.stats, entry)
 }
 
+sink(out.file)  # Redirect standard output to the output file.
+
+cat("Gender proportions:\n\n")
 print(Round(gender.props, ndigits))
+
+cat("\nUser type proportions:\n\n")
 print(Round(user.type.props, ndigits))
+
+cat("\nAge statistics:\n\n")
 print(Round(age.stats, ndigits))
 
 # Calculate proportions for each possible group gender composition and user
@@ -166,6 +175,9 @@ for (n in 1:max.group.size) {
     user.type.props <- rbind(user.type.props, entry)
   }
   
+  cat("\nGender composition (group size = ", n, "):\n\n", sep="")
   print(Round(gender.props, ndigits))
+  
+  cat("\nUser type composition (group size = ", n, "):\n\n", sep="")
   print(Round(user.type.props, ndigits))
 }
