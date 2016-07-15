@@ -1,11 +1,29 @@
 library(docopt)
 
+Round <- function(df, ndigits) {
+  # Rounds the numeric entries of a data frame to a specified number of decimal
+  # places.
+  #
+  # Args:
+  #   df: The data frame whose entries are to be rounded.
+  #   ndigits: The number of decimal places.
+  #
+  # Returns:
+  #   The data frame with the numeric entries rounded.
+  
+  num.cols <- sapply(df, is.numeric)
+  df[num.cols] <- lapply(df[num.cols], round, ndigits)
+  return(df)
+}
+
 # Process the command line arguments.
 
-"Usage: citibike_stat.R (--in-file FILE)
+"Usage: citibike_stat.R (--in-file FILE) (--data-year YEAR) [--ndigits N]
 
 --help                Show this.
---in-file FILE        Specify input file." -> doc
+--in-file FILE        Specify input file.
+--data-year YEAR      The year this data was collected.
+--ndigits N           The number of decimal places to show in output." -> doc
 
 options <- docopt(doc)
 
@@ -14,11 +32,9 @@ if (options[["help"]]) {
   quit()
 }
 
-in.file <- options[["in-file"]]
-
-# The year this data was collected.
-# TODO: Specify over command line or something.
-data.year <- 2015
+in.file   <- options[["in-file"]]
+data.year <- as.integer(options[["data-year"]])
+ndigits   <- ifelse(is.null(options[["ndigits"]]), 3, as.integer(options[["ndigits"]]))
 
 # Read in the data and place it in a data frame. Ignore the first 13 columns;
 # read in the remaining 6.
@@ -87,8 +103,8 @@ for (n in 1:max.group.size) {
   nsubscriber <- sum(relevant$usertype == "Subscriber")
   ncustomer   <- total - nsubscriber
   
-  entry <- data.frame(total, subscriber=nsubscriber / total,
-                             customer=ncustomer / total)
+  entry <- data.frame(groupsize=n, total, subscriber=nsubscriber / total,
+                      customer=ncustomer / total)
   
   user.type.props <- rbind(user.type.props, entry)
   
@@ -98,9 +114,8 @@ for (n in 1:max.group.size) {
   nfemale   <- sum(relevant$gender == 2)
   nunknown  <- total - nmale - nfemale
   
-  entry <- data.frame(total, unknown=nunknown / total,
-                             male=nmale / total,
-                             female=nfemale / total)
+  entry <- data.frame(groupsize=n, total, unknown=nunknown / total,
+                      male=nmale / total, female=nfemale / total)
   
   gender.props <- rbind(gender.props, entry)
   
@@ -115,9 +130,13 @@ for (n in 1:max.group.size) {
   meandiff <- mean(relevant$agediff, na.rm=TRUE)
   sddiff <- sd(relevant$agediff, na.rm=TRUE)
   
-  entry <- data.frame(meanage, sdage, meandiff, sddiff)
+  entry <- data.frame(groupsize=n, meanage, sdage, meandiff, sddiff)
   age.stats <- rbind(age.stats, entry)
 }
+
+print(Round(gender.props, ndigits))
+print(Round(user.type.props, ndigits))
+print(Round(age.stats, ndigits))
 
 # Calculate proportions for each possible group gender composition and user
 # type composition.
@@ -130,22 +149,23 @@ for (n in 1:max.group.size) {
   user.type.props <- NULL
   
   for (k in 0:n) {
-    # Calculate gender compositions.
+    # Calculate gender composition.
     
     # Count of groups with k males and (n-k) females.
     count <- sum(relevant$nmales == k & relevant$nfemales == n-k)
     
-    # TODO: Possibly rename the rows.
-    entry <- data.frame(count, prop=count / total)
+    entry <- data.frame(nmales=k, nfemales=n-k, count, prop=count / total)
     gender.props <- rbind(gender.props, entry)
     
-    # Calculate user type compositions.
+    # Calculate user type composition.
     
     # Count of groups with k subscribers and (n-k) customers.
     count <- sum(relevant$nsubscribers == k & relevant$ncustomers == n-k)
     
-    # TODO: Possibly rename the rows.
-    entry <- data.frame(count, prop=count / total)
+    entry <- data.frame(nsubscribers=k, ncustomers=n-k, count, prop=count / total)
     user.type.props <- rbind(user.type.props, entry)
   }
+  
+  print(Round(gender.props, ndigits))
+  print(Round(user.type.props, ndigits))
 }
