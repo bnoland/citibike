@@ -18,7 +18,7 @@ Round <- function(df, ndigits) {
 
 # Process the command line arguments.
 
-"Usage: citibike_stat.R (--in-file FILE) (--out-file FILE) (--data-year YEAR) [--ndigits N]
+"Usage: citibike_stats.R (--in-file FILE) (--out-file FILE) (--data-year YEAR) [--ndigits N]
 
 --help                Show this.
 --in-file FILE        Specify input file.
