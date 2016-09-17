@@ -1,4 +1,5 @@
-Script to detect possible groups of riders in Citi Bike trip data.
+Scripts to detect possible groups of riders in Citi Bike trip data and to calculate
+summary statistics thereof.
 
 Descriptions of grouping methods
 --------------------------------
