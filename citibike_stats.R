@@ -49,13 +49,13 @@ col.classes <- c(rep("NULL", 13), rep(NA, 6))
 citibike <- read.csv(in.file, as.is=TRUE, colClasses=col.classes)
 
 # Make a column containing (approximate) ages.
-citibike$age <- data.year - citibike$birthyear
+citibike$age <- data.year - citibike$birth.year
 
 # Make a copy of the data in wide format for convenience.
 # TODO: Is there a simple way that avoids the reshape?
-reshaped <- reshape(citibike, idvar="groupid", timevar="groupmemberid",
-                                        v.names=c("usertype", "birthyear", "gender", "age"),
-                                        direction="wide")
+reshaped <- reshape(citibike, idvar="group.id", timevar="group.member.id",
+                    v.names=c("usertype", "birth.year", "gender", "age"),
+                    direction="wide")
 
 # Calculate counts for each gender type (unknown=0, male=1, female=2).
 
@@ -99,10 +99,10 @@ gender.props <- NULL
 user.type.props <- NULL
 age.stats <- NULL
 
-max.group.size <- max(citibike$groupsize)
+max.group.size <- max(citibike$group.size)
 
 for (n in 1:max.group.size) {
-    relevant <- citibike[citibike$groupsize == n, ]
+    relevant <- citibike[citibike$group.size == n, ]
     total <- nrow(relevant)
     
     # Calculate user type proportions.
@@ -110,7 +110,7 @@ for (n in 1:max.group.size) {
     nsubscriber <- sum(relevant$usertype == "Subscriber")
     ncustomer <- total - nsubscriber
     
-    entry <- data.frame(groupsize=n, total, subscriber=nsubscriber / total,
+    entry <- data.frame(group.size=n, total, subscriber=nsubscriber / total,
                                             customer=ncustomer / total)
     
     user.type.props <- rbind(user.type.props, entry)
@@ -121,7 +121,7 @@ for (n in 1:max.group.size) {
     nfemale <- sum(relevant$gender == 2)
     nunknown <- total - nmale - nfemale
     
-    entry <- data.frame(groupsize=n, total, unknown=nunknown / total, male=nmale / total,
+    entry <- data.frame(group.size=n, total, unknown=nunknown / total, male=nmale / total,
                         female=nfemale / total)
     
     gender.props <- rbind(gender.props, entry)
@@ -132,12 +132,12 @@ for (n in 1:max.group.size) {
     sdage <- sd(relevant$age, na.rm=TRUE)
     
     # Need wide data for next few calculations.
-    relevant <- reshaped[reshaped$groupsize == n, ]
+    relevant <- reshaped[reshaped$group.size == n, ]
     
     meandiff <- mean(relevant$agediff, na.rm=TRUE)
     sddiff <- sd(relevant$agediff, na.rm=TRUE)
     
-    entry <- data.frame(groupsize=n, meanage, sdage, meandiff, sddiff)
+    entry <- data.frame(group.size=n, meanage, sdage, meandiff, sddiff)
     age.stats <- rbind(age.stats, entry)
 }
 
@@ -156,7 +156,7 @@ print(Round(age.stats, ndigits))
 # type composition.
 
 for (n in 1:max.group.size) {
-    relevant <- reshaped[reshaped$groupsize == n, ]
+    relevant <- reshaped[reshaped$group.size == n, ]
     total <- nrow(relevant)
     
     gender.props <- NULL

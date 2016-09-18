@@ -18,9 +18,9 @@ SameGroup <- function(x, y, start.thresh, stop.thresh) {
     # Returns:
     #   TRUE if x and y are in the same group, FALSE otherwise.
     
-    if (x$startstationid != y$startstationid)
+    if (x$start.station.id != y$start.station.id)
         return(FALSE)
-    if (x$endstationid != y$endstationid)
+    if (x$end.station.id != y$end.station.id)
         return(FALSE)
     
     diff <- as.numeric(difftime(x$starttime, y$starttime, units="secs"))
@@ -61,7 +61,7 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
     # Write out the column names.
     write.csv(citibike[0, ], file=f)
     
-    groupid <- 1
+    group.id <- 1
     last.row.names <- NULL
     
     for (i in 1:nrow(citibike)) {
@@ -98,10 +98,10 @@ OutputGroupedData1 <- function(citibike, out.file, start.thresh, stop.thresh, sh
         
         last.row.names <- current.row.names
         
-        current.group$groupmemberid <- 1:nrow(current.group)
-        current.group$groupsize <- nrow(current.group)
-        current.group$groupid <- groupid
-        groupid <- groupid + 1
+        current.group$group.member.id <- 1:nrow(current.group)
+        current.group$group.size <- nrow(current.group)
+        current.group$group.id <- group.id
+        group.id <- group.id + 1
         
         OutputGroup(current.group, f)
     }
@@ -126,7 +126,7 @@ OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, sh
     # Write out the column names.
     write.csv(citibike[0, ], file=f)
     
-    groupid <- 1
+    group.id <- 1
     
     ShowProgress(1, citibike, show.progress)
     
@@ -144,10 +144,10 @@ OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, sh
             } else {
                 # At the end of the current group.
                 
-                current.group$groupmemberid <- 1:nrow(current.group)
-                current.group$groupsize <- nrow(current.group)
-                current.group$groupid <- groupid
-                groupid <- groupid + 1
+                current.group$group.member.id <- 1:nrow(current.group)
+                current.group$group.size <- nrow(current.group)
+                current.group$group.id <- group.id
+                group.id <- group.id + 1
                 
                 OutputGroup(current.group, f)
                 
@@ -158,9 +158,9 @@ OutputGroupedData2 <- function(citibike, out.file, start.thresh, stop.thresh, sh
     
     # Deal with final group.
     
-    current.group$groupmemberid <- 1:nrow(current.group)
-    current.group$groupsize <- nrow(current.group)
-    current.group$groupid <- groupid
+    current.group$group.member.id <- 1:nrow(current.group)
+    current.group$group.size <- nrow(current.group)
+    current.group$group.id <- group.id
     
     OutputGroup(current.group, f)
     
@@ -235,11 +235,11 @@ citibike <- within(citibike, {
 # Order citibike as follows: first by start station ID, then by end station
 # ID, then by start time, and finally by stop time.
 
-citibike <- with(citibike, citibike[order(startstationid, endstationid, starttime, stoptime), ])
+citibike <- with(citibike, citibike[order(start.station.id, end.station.id, starttime, stoptime), ])
 
-citibike$groupid <- NA          # Column for holding group IDs.
-citibike$groupmemberid <- NA    # Column for identifying members within groups.
-citibike$groupsize <- NA        # Column for holding group size.
+citibike$group.id <- NA         # Column for holding group IDs.
+citibike$group.member.id <- NA  # Column for identifying members within groups.
+citibike$group.size <- NA       # Column for holding group size.
 
 # Divide the observations in citibike into groups and output the results to a
 # file specified by out.file.
