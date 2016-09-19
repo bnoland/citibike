@@ -195,8 +195,8 @@ ShowProgress <- function(i, citibike, show.output=TRUE) {
 --in-file FILE          Specify input file.
 --out-file FILE         Specify output file.
 --method METHOD         Specify grouping method to use.
---start-thresh START    Specify start time difference threshold.
---stop-thresh STOP      Specify stop time difference threshold.
+--start-thresh START    Specify start time difference threshold (in seconds).
+--stop-thresh STOP      Specify stop time difference threshold (in seconds).
 --nrows N               Specify number of rows to read from the start of the data file.
 --show-progress         Show progress." -> doc
 

@@ -40,7 +40,7 @@ if (!replace && size > nrow(citibike))
 # Extract a sample as specified.
 samp <- citibike[sample(nrow(citibike), size, replace), ]
 
-# If specified, clear out all the attributes not used to place the observations into groups.
+# If specified, clear out all the attributes not used to group the observations.
 if (clean) {
     samp$tripduration <- NA
     samp$start.station.latitude <- NA
