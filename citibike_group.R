@@ -202,11 +202,6 @@ ShowProgress <- function(i, citibike, show.output=TRUE) {
 
 options <- docopt(doc)
 
-if (options[["help"]]) {
-    cat(doc)
-    quit()
-}
-
 # Extract the given values if present, and assign defaults otherwise.
 # TODO: More stringent error checking?
 

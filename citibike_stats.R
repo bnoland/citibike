@@ -33,11 +33,6 @@ Round <- function(df, ndigits) {
 
 options <- docopt(doc)
 
-if (options[["help"]]) {
-    cat(doc)
-    quit()
-}
-
 in.file   <- options[["in-file"]]
 out.file  <- options[["out-file"]]
 data.year <- as.integer(options[["data-year"]])

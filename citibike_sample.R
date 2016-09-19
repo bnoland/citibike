@@ -19,11 +19,6 @@ library(docopt)
 
 options <- docopt(doc)
 
-if (options[["help"]]) {
-    cat(doc)
-    quit()
-}
-
 in.file  <- options[["in-file"]]
 out.file <- options[["out-file"]]
 size     <- as.integer(options[["size"]])
