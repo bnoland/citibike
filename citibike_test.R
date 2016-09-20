@@ -33,7 +33,7 @@ TimeSample <- function(start.time, end.time, n) {
 --min-trip-duration D   Specify minimum trip duration (in seconds).
 --max-trip-duration D   Specify maximum trip duration (in seconds).
 
-The values for --time-beg and --time-end are to be specified in the following R date/time
+The values for --min-start-time and --max-start-time are to be specified in the following R date/time
 format: \"%m/%d/%Y %H:%M:%S\" (e.g., \"9/1/2013 1:03:12\", \"12/24/2014 23:25:00\")." -> doc
 
 options <- docopt(doc)
