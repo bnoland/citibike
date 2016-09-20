@@ -80,7 +80,7 @@ start.station.id <- sample(1:nstations, size=nobs, replace=TRUE)
 end.station.id <- sample(1:nstations, size=nobs, replace=TRUE)
 
 # Shove everything into a data frame.
-citibike <- data.frame(tripduration, starttime, stoptime, start.station.id, end.station.id)
+citibike <- data.frame(starttime, stoptime, start.station.id, end.station.id)
 
 # Write the data into the specified file.
 write.csv(citibike, out.file, row.names=FALSE)

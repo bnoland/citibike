@@ -7,7 +7,7 @@ library(docopt)
 
 # Process the command line arguments.
 
-"Usage: citibike_sample.R (--in-file FILE) (--out-file FILE) (--size N) [--nrows N] [--replace] [--clean]
+"Usage: citibike_sample.R (--in-file FILE) (--out-file FILE) (--size N) [--nrows N] [--replace] [--clean] [--row-names]
 
 --help          Show this.
 --in-file FILE  Specify input file.
@@ -15,16 +15,18 @@ library(docopt)
 --size N        Specify sample size.
 --nrows N       Specify number of rows to read from the start of the data file.
 --replace       Take samples with replacement; default is without replacement.
---clean         Set all attributes not used by the grouping methods to NA in the sample (removes clutter for testing)." -> doc;
+--clean         Remove all attributes not used by the grouping methods (removes clutter for testing).
+--row-names     Output row names." -> doc
 
 options <- docopt(doc)
 
-in.file  <- options[["in-file"]]
-out.file <- options[["out-file"]]
-size     <- as.integer(options[["size"]])
-nrows    <- ifelse(is.null(options[["nrows"]]), -1, as.integer(options[["nrows"]]))
-replace  <- options[["replace"]]
-clean    <- options[["clean"]]
+in.file   <- options[["in-file"]]
+out.file  <- options[["out-file"]]
+size      <- as.integer(options[["size"]])
+nrows     <- ifelse(is.null(options[["nrows"]]), -1, as.integer(options[["nrows"]]))
+replace   <- options[["replace"]]
+clean     <- options[["clean"]]
+row.names <- options[["row-names"]]
 
 # Read in the data set.
 citibike <- read.csv(in.file, as.is=TRUE, nrows=nrows)
@@ -37,16 +39,18 @@ samp <- citibike[sample(nrow(citibike), size, replace), ]
 
 # If specified, clear out all the attributes not used to group the observations.
 if (clean) {
-    samp$tripduration <- NA
-    samp$start.station.latitude <- NA
-    samp$start.station.longitude <- NA
-    samp$end.station.latitude <- NA
-    samp$end.station.longitude <- NA
-    samp$bikeid <- NA
-    samp$usertype <- NA
-    samp$birth.year <- NA
-    samp$gender <- NA
+    samp$tripduration <- NULL
+    samp$start.station.name <- NULL
+    samp$start.station.latitude <- NULL
+    samp$start.station.longitude <- NULL
+    samp$end.station.name <- NULL
+    samp$end.station.latitude <- NULL
+    samp$end.station.longitude <- NULL
+    samp$bikeid <- NULL
+    samp$usertype <- NULL
+    samp$birth.year <- NULL
+    samp$gender <- NULL
 }
 
 # Write the sample out to the specified file.
-write.csv(samp, out.file)
+write.csv(samp, out.file, row.names=row.names)
