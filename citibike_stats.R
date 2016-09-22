@@ -55,7 +55,7 @@ reshaped <- reshape(citibike, idvar="group.id", timevar="group.member.id",
 # Calculate counts for each gender type (unknown=0, male=1, female=2).
 
 gender.col.names <- grep("\\bgender\\.[[:digit:]]+", names(reshaped))
-gender.cols <- reshaped[, gender.col.names]
+gender.cols <- reshaped[, gender.col.names, drop=FALSE]
 
 reshaped$nunknown <- apply(gender.cols, 1, function(x) length(which(x == 0)))
 reshaped$nmales <- apply(gender.cols, 1, function(x) length(which(x == 1)))
@@ -64,7 +64,7 @@ reshaped$nfemales <- apply(gender.cols, 1, function(x) length(which(x == 2)))
 # Calculate counts for each user type.
 
 user.type.col.names <- grep("\\busertype\\.[[:digit:]]+", names(reshaped))
-user.type.cols <- reshaped[, user.type.col.names]
+user.type.cols <- reshaped[, user.type.col.names, drop=FALSE]
 
 reshaped$nsubscribers <- apply(user.type.cols, 1, function(x) {
     length(which(x == "Subscriber"))
@@ -77,7 +77,7 @@ reshaped$ncustomers <- apply(user.type.cols, 1, function(x) {
 # each group.
 
 age.col.names <- grep("\\bage\\.[[:digit:]]+", names(reshaped))
-age.cols <- reshaped[, age.col.names]
+age.cols <- reshaped[, age.col.names, drop=FALSE]
 
 reshaped$agediff <- apply(age.cols, 1, function(x) {
     if (all(is.na(x)))
