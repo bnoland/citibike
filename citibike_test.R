@@ -32,8 +32,8 @@ TimeSample <- function(start.time, end.time, n) {
 --max-start-time TIME       Specify maximum starting time.
 --min-trip-duration D       Specify minimum trip duration (in seconds).
 --max-trip-duration D       Specify maximum trip duration (in seconds).
---min-birth-year A
---max-birth-year A
+--min-birth-year A          Specify minimum birth year.
+--max-birth-year A          Specify maximum birth year.
 --gender-probs PROBS        Specify gender probabilities (unknown,male,female).
 --user-type-probs PROBS     Specify user type probabilities (subscriber,customer).
 
