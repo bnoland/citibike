@@ -22,16 +22,18 @@ TimeSample <- function(start.time, end.time, n) {
 
 # Process the command line arguments.
 
-"Usage: citibike_test.R (--out-file FILE) (--nobs N) (--nstations N) [--min-start-time TIME] [--max-start-time TIME] [--min-trip-duration D] [--max-trip-duration D]
+"Usage: citibike_test.R (--out-file FILE) (--nobs N) (--nstations N) [--min-start-time TIME] [--max-start-time TIME] [--min-trip-duration D] [--max-trip-duration D] [--gender-probs PROBS] [--user-type-probs PROBS]
 
---help                  Show this.
---out-file FILE         Specify output file.
---nobs N                Specify number of observations to generate.
---nstations N           Specify number of stations.
---min-start-time TIME   Specify minimum starting time.
---max-start-time TIME   Specify maximum starting time.
---min-trip-duration D   Specify minimum trip duration (in seconds).
---max-trip-duration D   Specify maximum trip duration (in seconds).
+--help                      Show this.
+--out-file FILE             Specify output file.
+--nobs N                    Specify number of observations to generate.
+--nstations N               Specify number of stations.
+--min-start-time TIME       Specify minimum starting time.
+--max-start-time TIME       Specify maximum starting time.
+--min-trip-duration D       Specify minimum trip duration (in seconds).
+--max-trip-duration D       Specify maximum trip duration (in seconds).
+--gender-probs PROBS        Specify gender probabilities (male,female,unknown).
+--user-type-probs PROBS     Specify user type probabilities (subscriber,customer).
 
 The values for --min-start-time and --max-start-time are to be specified in the following R date/time
 format: \"%m/%d/%Y %H:%M:%S\" (e.g., \"9/1/2013 1:03:12\", \"12/24/2014 23:25:00\")." -> doc
@@ -65,6 +67,30 @@ min.trip <- ifelse(is.null(options[["min-trip-duration"]]), 0, as.integer(option
 max.trip <- ifelse(is.null(options[["max-trip-duration"]]), 0, as.integer(options[["max-trip-duration"]]))
 
 # TODO: Make sure min.trip <= max.trip?
+
+if (!is.null(options[["gender-probs"]])) {
+    gender.probs <- strsplit(options[["gender-probs"]], ",", fixed=TRUE)
+    gender.probs <- unlist(gender.probs)
+    gender.probs <- as.double(gender.probs)
+    if (length(gender.probs) != 3)
+        stop("Specify exactly 3 gender probabilities.")
+} else {
+    gender.probs = c(1/3, 1/3, 1/3)
+}
+
+# TODO: Make sure that gender probabilities add up to 1?
+
+if (!is.null(options[["user-type-probs"]])) {
+    user.type.probs <- strsplit(options[["user-type-probs"]], ",", fixed=TRUE)
+    user.type.probs <- unlist(user.type.probs)
+    user.type.probs <- as.double(user.type.probs)
+    if (length(user.type.probs) != 2)
+        stop("Specify exactly 2 user type probabilities.")
+} else {
+    user.type.probs <- c(1/2, 1/2)
+}
+
+# TODO: Make sure that user type probabilities add up to 1?
 
 # Initialize the relevant attributes.
 
