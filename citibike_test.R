@@ -60,7 +60,7 @@ if (!is.null(options[["min-start-time"]])) {
 if (!is.null(options[["max-start-time"]])) {
     max.start <- strptime(options[["max-start-time"]], format=kTimeFormat)
 } else {
-    max.start <- strptime("01/31/2000 23:59:59", format=kTimeFormat)
+    max.start <- strptime("01/01/2000 23:59:59", format=kTimeFormat)
 }
 
 # TODO: Make sure that min.start <= max.start?
