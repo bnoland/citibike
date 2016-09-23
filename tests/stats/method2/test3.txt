@@ -1,0 +1,83 @@
+Gender proportions:
+
+  group.size total unknown  male female
+1          1    12   0.417 0.333   0.25
+2          2     4   0.500 0.250   0.25
+3          3     0     NaN   NaN    NaN
+4          4     4   0.250 0.000   0.75
+
+User type proportions:
+
+  group.size total subscriber customer
+1          1    12      0.583    0.417
+2          2     4      0.500    0.500
+3          3     0        NaN      NaN
+4          4     4      0.000    1.000
+
+Age statistics:
+
+  group.size meanage  sdage meandiff sddiff
+1          1  27.833 17.267      0.0  0.000
+2          2  43.250 16.581     21.5 10.607
+3          3     NaN     NA      NaN     NA
+4          4  23.000 15.979     35.0     NA
+
+Gender composition (group size = 1):
+
+  nmales nfemales count  prop
+1      0        1     3 0.250
+2      1        0     4 0.333
+
+User type composition (group size = 1):
+
+  nsubscribers ncustomers count  prop
+1            0          1     5 0.417
+2            1          0     7 0.583
+
+Gender composition (group size = 2):
+
+  nmales nfemales count prop
+1      0        2     0    0
+2      1        1     0    0
+3      2        0     0    0
+
+User type composition (group size = 2):
+
+  nsubscribers ncustomers count prop
+1            0          2     1  0.5
+2            1          1     0  0.0
+3            2          0     1  0.5
+
+Gender composition (group size = 3):
+
+  nmales nfemales count prop
+1      0        3     0  NaN
+2      1        2     0  NaN
+3      2        1     0  NaN
+4      3        0     0  NaN
+
+User type composition (group size = 3):
+
+  nsubscribers ncustomers count prop
+1            0          3     0  NaN
+2            1          2     0  NaN
+3            2          1     0  NaN
+4            3          0     0  NaN
+
+Gender composition (group size = 4):
+
+  nmales nfemales count prop
+1      0        4     0    0
+2      1        3     0    0
+3      2        2     0    0
+4      3        1     0    0
+5      4        0     0    0
+
+User type composition (group size = 4):
+
+  nsubscribers ncustomers count prop
+1            0          4     1    1
+2            1          3     0    0
+3            2          2     0    0
+4            3          1     0    0
+5            4          0     0    0

@@ -1,0 +1,62 @@
+Gender proportions:
+
+  group.size total unknown male female
+1          1    11       1    0      0
+2          2     6       1    0      0
+3          3     3       1    0      0
+
+User type proportions:
+
+  group.size total subscriber customer
+1          1    11      0.364    0.636
+2          2     6      0.667    0.333
+3          3     3      0.667    0.333
+
+Age statistics:
+
+  group.size meanage  sdage meandiff sddiff
+1          1  29.273 18.884    0.000  0.000
+2          2  21.000 22.943   17.333 11.719
+3          3  37.333 21.127   42.000     NA
+
+Gender composition (group size = 1):
+
+  nmales nfemales count prop
+1      0        1     0    0
+2      1        0     0    0
+
+User type composition (group size = 1):
+
+  nsubscribers ncustomers count  prop
+1            0          1     7 0.636
+2            1          0     4 0.364
+
+Gender composition (group size = 2):
+
+  nmales nfemales count prop
+1      0        2     0    0
+2      1        1     0    0
+3      2        0     0    0
+
+User type composition (group size = 2):
+
+  nsubscribers ncustomers count  prop
+1            0          2     0 0.000
+2            1          1     2 0.667
+3            2          0     1 0.333
+
+Gender composition (group size = 3):
+
+  nmales nfemales count prop
+1      0        3     0    0
+2      1        2     0    0
+3      2        1     0    0
+4      3        0     0    0
+
+User type composition (group size = 3):
+
+  nsubscribers ncustomers count prop
+1            0          3     0    0
+2            1          2     0    0
+3            2          1     1    1
+4            3          0     0    0

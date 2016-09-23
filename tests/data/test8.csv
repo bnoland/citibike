@@ -1,0 +1,21 @@
+"tripduration","starttime","stoptime","start.station.id","start.station.name","start.station.latitude","start.station.longitude","end.station.id","end.station.name","end.station.latitude","end.station.longitude","bikeid","usertype","birth.year","gender"
+1569,"01/01/2000 12:55:47","01/01/2000 13:21:56",4,NA,NA,NA,3,NA,NA,NA,NA,"Subscriber",919,2
+347,"01/01/2000 05:13:13","01/01/2000 05:19:00",4,NA,NA,NA,4,NA,NA,NA,NA,"Subscriber",214,0
+541,"01/01/2000 03:04:12","01/01/2000 03:13:13",1,NA,NA,NA,5,NA,NA,NA,NA,"Customer",1601,1
+489,"01/01/2000 22:57:37","01/01/2000 23:05:46",2,NA,NA,NA,2,NA,NA,NA,NA,"Customer",1649,0
+1195,"01/01/2000 03:45:42","01/01/2000 04:05:37",1,NA,NA,NA,2,NA,NA,NA,NA,"Subscriber",1774,0
+925,"01/01/2000 06:54:48","01/01/2000 07:10:13",4,NA,NA,NA,5,NA,NA,NA,NA,"Subscriber",673,0
+1820,"01/01/2000 12:34:20","01/01/2000 13:04:40",5,NA,NA,NA,5,NA,NA,NA,NA,"Subscriber",598,1
+844,"01/01/2000 22:05:53","01/01/2000 22:19:57",4,NA,NA,NA,4,NA,NA,NA,NA,"Subscriber",1026,0
+974,"01/01/2000 15:18:47","01/01/2000 15:35:01",1,NA,NA,NA,4,NA,NA,NA,NA,"Customer",1182,0
+189,"01/01/2000 09:03:30","01/01/2000 09:06:39",2,NA,NA,NA,4,NA,NA,NA,NA,"Customer",216,2
+708,"01/01/2000 11:33:56","01/01/2000 11:45:44",5,NA,NA,NA,1,NA,NA,NA,NA,"Customer",953,2
+197,"01/01/2000 20:30:03","01/01/2000 20:33:20",1,NA,NA,NA,2,NA,NA,NA,NA,"Subscriber",1102,1
+776,"01/01/2000 13:26:48","01/01/2000 13:39:44",1,NA,NA,NA,4,NA,NA,NA,NA,"Customer",1775,0
+1625,"01/01/2000 18:09:57","01/01/2000 18:37:02",2,NA,NA,NA,3,NA,NA,NA,NA,"Subscriber",802,1
+1657,"01/01/2000 05:40:23","01/01/2000 06:08:00",4,NA,NA,NA,1,NA,NA,NA,NA,"Subscriber",764,1
+864,"01/01/2000 02:29:59","01/01/2000 02:44:23",5,NA,NA,NA,5,NA,NA,NA,NA,"Subscriber",1598,1
+934,"01/01/2000 03:21:39","01/01/2000 03:37:13",3,NA,NA,NA,3,NA,NA,NA,NA,"Customer",929,0
+300,"01/01/2000 16:24:15","01/01/2000 16:29:15",5,NA,NA,NA,2,NA,NA,NA,NA,"Customer",723,0
+1082,"01/01/2000 02:07:50","01/01/2000 02:25:52",3,NA,NA,NA,1,NA,NA,NA,NA,"Subscriber",492,2
+642,"01/01/2000 09:14:34","01/01/2000 09:25:16",4,NA,NA,NA,1,NA,NA,NA,NA,"Customer",1486,1

@@ -1,2 +1,2 @@
 *.csv
-!tests/*.csv
+!tests/**/*.csv

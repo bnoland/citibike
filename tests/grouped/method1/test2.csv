@@ -1,0 +1,21 @@
+"","tripduration","starttime","stoptime","start.station.id","start.station.name","start.station.latitude","start.station.longitude","end.station.id","end.station.name","end.station.latitude","end.station.longitude","bikeid","usertype","birth.year","gender","group.id","group.member.id","group.size"
+"14",0,2000-01-01 06:59:34,2000-01-01 06:59:34,1,NA,NA,NA,1,NA,NA,NA,NA,"Customer",1950,0,1,1,1
+"20",0,2000-01-01 14:02:25,2000-01-01 14:02:25,1,NA,NA,NA,1,NA,NA,NA,NA,"Customer",1995,0,2,1,1
+"6",0,2000-01-01 21:13:02,2000-01-01 21:13:02,1,NA,NA,NA,1,NA,NA,NA,NA,"Customer",1956,1,3,1,1
+"12",0,2000-01-01 01:21:47,2000-01-01 01:21:47,1,NA,NA,NA,2,NA,NA,NA,NA,"Subscriber",1948,0,4,1,1
+"2",0,2000-01-01 10:10:08,2000-01-01 10:10:08,1,NA,NA,NA,2,NA,NA,NA,NA,"Customer",1969,0,5,1,1
+"17",0,2000-01-01 09:20:48,2000-01-01 09:20:48,1,NA,NA,NA,4,NA,NA,NA,NA,"Customer",1973,2,6,1,1
+"4",0,2000-01-01 22:13:49,2000-01-01 22:13:49,2,NA,NA,NA,3,NA,NA,NA,NA,"Customer",1976,1,7,1,1
+"11",0,2000-01-01 10:21:49,2000-01-01 10:21:49,2,NA,NA,NA,4,NA,NA,NA,NA,"Subscriber",1949,0,8,1,1
+"9",0,2000-01-01 14:56:55,2000-01-01 14:56:55,2,NA,NA,NA,4,NA,NA,NA,NA,"Subscriber",1958,0,9,1,1
+"8",0,2000-01-01 03:13:06,2000-01-01 03:13:06,2,NA,NA,NA,5,NA,NA,NA,NA,"Subscriber",1969,1,10,1,1
+"3",0,2000-01-01 03:10:43,2000-01-01 03:10:43,3,NA,NA,NA,1,NA,NA,NA,NA,"Customer",1986,1,11,1,1
+"10",0,2000-01-01 06:39:38,2000-01-01 06:39:38,3,NA,NA,NA,3,NA,NA,NA,NA,"Customer",1951,2,12,1,1
+"15",0,2000-01-01 14:02:56,2000-01-01 14:02:56,3,NA,NA,NA,3,NA,NA,NA,NA,"Subscriber",1953,0,13,1,1
+"16",0,2000-01-01 03:47:25,2000-01-01 03:47:25,3,NA,NA,NA,5,NA,NA,NA,NA,"Subscriber",1958,0,14,1,1
+"18",0,2000-01-01 13:58:49,2000-01-01 13:58:49,4,NA,NA,NA,3,NA,NA,NA,NA,"Customer",1967,0,15,1,1
+"13",0,2000-01-01 19:09:00,2000-01-01 19:09:00,4,NA,NA,NA,4,NA,NA,NA,NA,"Subscriber",1951,1,16,1,1
+"7",0,2000-01-01 21:09:30,2000-01-01 21:09:30,4,NA,NA,NA,4,NA,NA,NA,NA,"Customer",1975,0,17,1,1
+"5",0,2000-01-01 19:53:07,2000-01-01 19:53:07,5,NA,NA,NA,1,NA,NA,NA,NA,"Subscriber",1963,2,18,1,1
+"1",0,2000-01-01 09:28:33,2000-01-01 09:28:33,5,NA,NA,NA,2,NA,NA,NA,NA,"Subscriber",1940,2,19,1,1
+"19",0,2000-01-01 19:39:30,2000-01-01 19:39:30,5,NA,NA,NA,3,NA,NA,NA,NA,"Customer",1997,0,20,1,1
