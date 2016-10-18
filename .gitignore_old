@@ -1,3 +1,0 @@
-*.csv
-!tests/**/*.csv
-!merge_data/*.csv
