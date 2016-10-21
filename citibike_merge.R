@@ -1,3 +1,5 @@
+# citibike_merge.R
+
 library(docopt)
 
 "Usage: citibike_merge.R (--in-file FILE) (--out-file FILE)

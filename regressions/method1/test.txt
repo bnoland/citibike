@@ -1,0 +1,140 @@
+
+Call:
+lm(formula = tripduration ~ group.size + LU23 + male + Subwaydummy + 
+    Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-3.793e+02  7.228e+02 -5.551e+01 -4.284e+02  8.948e+02 -1.421e-14 -7.544e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)     1645.0      531.6   3.094   0.0364 *
+group.size          NA         NA      NA       NA  
+LU23           -2598.5     1927.9  -1.348   0.2490  
+male                NA         NA      NA       NA  
+Subwaydummy         NA         NA      NA       NA  
+Bikepathdummy   -688.5      805.4  -0.855   0.4408  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 745.5 on 4 degrees of freedom
+Multiple R-squared:  0.3941,	Adjusted R-squared:  0.09119 
+F-statistic: 1.301 on 2 and 4 DF,  p-value: 0.3671
+
+
+Call:
+lm(formula = tripduration ~ group.size + LU23 + customer + Subwaydummy + 
+    Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-3.793e+02  7.228e+02 -5.551e+01 -4.284e+02  8.948e+02 -1.421e-14 -7.544e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)     1645.0      531.6   3.094   0.0364 *
+group.size          NA         NA      NA       NA  
+LU23           -2598.5     1927.9  -1.348   0.2490  
+customer            NA         NA      NA       NA  
+Subwaydummy         NA         NA      NA       NA  
+Bikepathdummy   -688.5      805.4  -0.855   0.4408  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 745.5 on 4 degrees of freedom
+Multiple R-squared:  0.3941,	Adjusted R-squared:  0.09119 
+F-statistic: 1.301 on 2 and 4 DF,  p-value: 0.3671
+
+
+Call:
+lm(formula = tripduration ~ group.size + LU458 + male + Subwaydummy + 
+    Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-3.644e+02  8.723e+02 -1.279e+02 -3.908e+02  8.388e+02  1.421e-14 -8.281e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept)     -338.1     1277.7  -0.265    0.804
+group.size          NA         NA      NA       NA
+LU458           1927.3     1708.4   1.128    0.322
+male                NA         NA      NA       NA
+Subwaydummy         NA         NA      NA       NA
+Bikepathdummy   -767.4      847.1  -0.906    0.416
+
+Residual standard error: 783 on 4 degrees of freedom
+Multiple R-squared:  0.3316,	Adjusted R-squared:  -0.002588 
+F-statistic: 0.9923 on 2 and 4 DF,  p-value: 0.4467
+
+
+Call:
+lm(formula = tripduration ~ group.size + LU458 + customer + Subwaydummy + 
+    Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-3.644e+02  8.723e+02 -1.279e+02 -3.908e+02  8.388e+02  1.421e-14 -8.281e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept)     -338.1     1277.7  -0.265    0.804
+group.size          NA         NA      NA       NA
+LU458           1927.3     1708.4   1.128    0.322
+customer            NA         NA      NA       NA
+Subwaydummy         NA         NA      NA       NA
+Bikepathdummy   -767.4      847.1  -0.906    0.416
+
+Residual standard error: 783 on 4 degrees of freedom
+Multiple R-squared:  0.3316,	Adjusted R-squared:  -0.002588 
+F-statistic: 0.9923 on 2 and 4 DF,  p-value: 0.4467
+
+
+Call:
+lm(formula = tripduration ~ group.size + LU6710 + male + Subwaydummy + 
+    Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-5.680e+02  1.374e+03 -1.837e+02 -7.335e+01  3.274e+02 -5.684e-14 -8.764e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)     1202.2      531.4   2.263   0.0864 .
+group.size          NA         NA      NA       NA  
+LU6710         -4638.4    12499.7  -0.371   0.7294  
+male                NA         NA      NA       NA  
+Subwaydummy         NA         NA      NA       NA  
+Bikepathdummy   -807.9      988.0  -0.818   0.4594  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 883.9 on 4 degrees of freedom
+Multiple R-squared:  0.1483,	Adjusted R-squared:  -0.2776 
+F-statistic: 0.3481 on 2 and 4 DF,  p-value: 0.7255
+
+
+Call:
+lm(formula = tripduration ~ group.size + LU6710 + customer + 
+    Subwaydummy + Bikepathdummy, data = citibike)
+
+Residuals:
+         1          2          3          4          5          6          7 
+-5.680e+02  1.374e+03 -1.837e+02 -7.335e+01  3.274e+02 -5.684e-14 -8.764e+02 
+
+Coefficients: (3 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)     1202.2      531.4   2.263   0.0864 .
+group.size          NA         NA      NA       NA  
+LU6710         -4638.4    12499.7  -0.371   0.7294  
+customer            NA         NA      NA       NA  
+Subwaydummy         NA         NA      NA       NA  
+Bikepathdummy   -807.9      988.0  -0.818   0.4594  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 883.9 on 4 degrees of freedom
+Multiple R-squared:  0.1483,	Adjusted R-squared:  -0.2776 
+F-statistic: 0.3481 on 2 and 4 DF,  p-value: 0.7255
+
