@@ -13,9 +13,6 @@ options <- docopt(doc)
 in.file <- options[["in-file"]]
 out.file <- options[["out-file"]]
 
-print(in.file)
-print(out.file)
-
 citibike <- read.csv(in.file, as.is=TRUE)
 
 sink(out.file)
