@@ -13,9 +13,16 @@ out.file <- options[["out-file"]]
 
 citibike <- read.csv(in.file, as.is=TRUE)
 
-station.names <- unique(citibike$start.station.name)
+station.data <- unique(citibike[c("start.station.name",
+                                "start.station.latitude",
+                                "start.station.longitude")])
+
+station.name <- station.data$start.station.name
+station.lat <- station.data$start.station.latitude
+station.long <- station.data$start.station.longitude
 
 results <- data.frame(station.name=character(),
+                      location=character(),
                       size1=integer(),
                       size2=integer(),
                       size3=integer(),
@@ -23,7 +30,13 @@ results <- data.frame(station.name=character(),
                       size5plus=integer(), stringsAsFactors=FALSE)
 
 # TODO: This is probably the dumb way to do this...
-for (name in station.names) {
+for (i in 1:nrow(station.data)) {
+    name <- station.name[i]
+    lat <- station.lat[i]
+    long <- station.long[i]
+    
+    location <- paste(lat, long, sep=",")
+    
     relevant <- citibike[citibike$start.station.name == name, ]
     counts <- integer(5)
     
@@ -36,6 +49,7 @@ for (name in station.names) {
         counts[5] = counts[5] + sum(relevant$group.size == i) / i
     
     row <- data.frame(station.name=name,
+                      location=location,
                       size1=counts[1],
                       size2=counts[2],
                       size3=counts[3],
