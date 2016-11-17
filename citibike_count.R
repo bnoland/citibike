@@ -29,7 +29,8 @@ results <- data.frame(station.name=character(),
                       size4=integer(),
                       size5plus=integer(), stringsAsFactors=FALSE)
 
-# TODO: This is probably the dumb way to do this...
+# TODO: This is probably the dumb way to do this. Maybe fix it, maybe don't. It seems to work well
+# enough for now.
 for (i in 1:nrow(station.data)) {
     name <- station.name[i]
     lat <- station.lat[i]
@@ -44,20 +45,24 @@ for (i in 1:nrow(station.data)) {
         counts[i] <- sum(relevant$group.size == i) / i
     
     max.group.size <- max(relevant$group.size)
+    
     counts[5] <- 0
-    for (i in 5:max.group.size)
-        counts[5] = counts[5] + sum(relevant$group.size == i) / i
+    i <- 5
+    while (i <= max.group.size) {
+        counts[5] <- counts[5] + sum(relevant$group.size == i) / i
+        i <- i + 1
+    }
     
-    row <- data.frame(station.name=name,
-                      location=location,
-                      size1=counts[1],
-                      size2=counts[2],
-                      size3=counts[3],
-                      size4=counts[4],
-                      size5plus=counts[5],
-                      total=sum(counts), stringsAsFactors=FALSE)
+    new.row <- data.frame(station.name=name,
+                          location=location,
+                          size1=counts[1],
+                          size2=counts[2],
+                          size3=counts[3],
+                          size4=counts[4],
+                          size5plus=counts[5],
+                          total=sum(counts), stringsAsFactors=FALSE)
     
-    results <- rbind(results, row)
+    results <- rbind(results, new.row)
 }
 
 write.csv(results, out.file)
